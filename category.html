@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category - Bhuj Online</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header style="flex-direction: column; text-align: center; gap: 0;">
+            <a href="index.html" style="text-decoration: none; color: inherit;">
+                <img src="assets/public/images/bhujonline-logo.png" alt="Bhuj Online Logo" style="height: 200px; width: auto; display: block; margin: 0 auto 20px auto;">
+            </a>
+        </header>
+
+        <main>
+            <a href="index.html" class="back-link">← Back to Categories</a>
+            
+            <h2 id="category-title" style="margin-bottom: 16px;">Category Name</h2>
+            
+            <input type="text" id="search-input" class="search-box" placeholder="Search name or area..." autocomplete="off">
+
+            <ul id="provider-list" class="provider-list">
+                <!-- Providers loaded by JS -->
+                <li class="empty-state">Loading...</li>
+            </ul>
+        </main>
+
+        <footer>
+            <p>Made for Bhuj by Hari Tech Solutions ! Ph : 9512234395</p>
+        </footer>
+    </div>
+
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

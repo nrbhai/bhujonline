@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhuj Online - Local Services</title>
+    <meta name="description" content="Fast, reliable local services in Bhuj. Find electricians, plumbers, and more.">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header: Logo Only, Centered -->
+        <header style="flex-direction: column; text-align: center; gap: 0; justify-content: center; margin-bottom: 0;">
+            <a href="index.html" style="text-decoration: none; color: inherit;">
+                <img src="assets/public/images/bhujonline-logo.png" alt="Bhuj Online Logo" style="height: 250px; width: auto; display: block; margin: 0 auto 20px auto;">
+            </a>
+        </header>
+
+        <main>
+            <!-- Search Bar -->
+            <div class="search-box-wrapper" style="margin-bottom: 20px;">
+                <input type="text" id="home-search" class="search-box" placeholder="Search services (e.g., Electrician, Taxi)..." autocomplete="off">
+            </div>
+
+            <!-- Category Grid -->
+            <ul id="category-list" class="category-list">
+                <li class="empty-state">Loading categories...</li>
+            </ul>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <p>Made for Bhuj by Hari Tech Solutions ! Ph : 9512234395</p>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

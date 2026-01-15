@@ -276,11 +276,9 @@ function parseCSV(csv) {
         const line = lines[i].trim();
         if (!line) continue;
 
-        // Regex to split by comma, ignoring commas inside quotes
-        const matches = line.match(/(".*?"|[^",]+)(?=\s*,|\s*$)/g);
-        if (!matches) continue;
-
-        const cols = matches.map(m => m.replace(/^"|"$/g, '').trim()); // Remove quotes
+        // Split by comma, but ignore commas inside double quotes
+        // This regex matches a comma only if it is followed by an even number of quotes
+        const cols = line.split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/).map(c => c.trim().replace(/^"|"$/g, ''));
 
         const catName = cols[0];
         const name = cols[1];

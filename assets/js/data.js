@@ -186,7 +186,7 @@ const categoryMetadata = {
     "Modular Kitchen": { "icon": "🍳", "gu": "મોડ્યુલર કિચન" },
     "Aluminium Fabrication": { "icon": "🪟", "gu": "એલ્યુમિનિયમ કામ" },
     "Tiles Fitter": { "icon": "💠", "gu": "ટાઈલ્સ ફિટર" },
-    
+
     // --- Housing & Property ---
     "Real Estate Agents": { "icon": "🏘️", "gu": "રિયલ એસ્ટેટ" },
     "House/Shop Rentals": { "icon": "🔑", "gu": "ભાડે મકાન/દુકાન" },
@@ -254,7 +254,7 @@ const categoryMetadata = {
     "Hospitals": { "icon": "🏥", "gu": "હોસ્પિટલ" },
     "Laboratories": { "icon": "🧪", "gu": "લેબોરેટરી" },
     "Medical": { "icon": "💊", "gu": "મેડિકલ સ્ટોર" },
-    
+
     // --- Existing Basics ---
     "Restaurants": { "icon": "🍽️", "gu": "રેસ્ટોરન્ટ" },
     "Hotels": { "icon": "🏨", "gu": "હોટલ" },
@@ -275,13 +275,18 @@ function parseCSV(csv) {
     for (let i = 1; i < lines.length; i++) {
         const line = lines[i].trim();
         if (!line) continue;
-        
-        const cols = line.split(',');
-        const catName = cols[0]?.trim();
-        const name = cols[1]?.trim();
-        const phone = cols[2]?.trim();
-        const area = cols[3]?.trim();
-        const rawTags = cols[4]?.trim() || "";
+
+        // Regex to split by comma, ignoring commas inside quotes
+        const matches = line.match(/(".*?"|[^",]+)(?=\s*,|\s*$)/g);
+        if (!matches) continue;
+
+        const cols = matches.map(m => m.replace(/^"|"$/g, '').trim()); // Remove quotes
+
+        const catName = cols[0];
+        const name = cols[1];
+        const phone = cols[2] || "";
+        const area = cols[3] || "";
+        const rawTags = cols[4] || "";
 
         if (!catName || !name) continue;
 
@@ -293,7 +298,7 @@ function parseCSV(csv) {
         if (!categoryMap[catId]) {
             // Lookup metadata
             const meta = categoryMetadata[catName] || { "icon": "🔧", "gu": catName };
-            
+
             categoryMap[catId] = {
                 id: catId,
                 name: catName,
@@ -315,30 +320,31 @@ function parseCSV(csv) {
 }
 
 // Global data initialization function
-window.initializeData = async function() {
+window.initializeData = async function () {
     try {
         console.log("Attempting to fetch data.csv...");
-        const response = await fetch('./data.csv');
+        // Add timestamp to prevent caching
+        const response = await fetch(`./data.csv?v=${Date.now()}`);
         if (!response.ok) throw new Error("Network response was not ok");
         const csvText = await response.text();
         console.log("Successfully loaded data.csv from server.");
         window.bhujData = parseCSV(csvText);
     } catch (error) {
-        console.log("Could not load data.csv (likely running locally or file not found). Using fallback data.");
+        console.log("Could not load data.csv. Using fallback data.");
         console.error(error);
         window.bhujData = parseCSV(csvRaw);
     }
 };
 
-window.getAllCategories = function() {
-    return window.bhujData.map(c => ({ 
-        id: c.id, 
+window.getAllCategories = function () {
+    return window.bhujData.map(c => ({
+        id: c.id,
         name: c.name,
         icon: c.icon,
         gu_name: c.gu_name
     }));
 };
 
-window.getProviders = function(catId) {
+window.getProviders = function (catId) {
     return window.bhujData.find(c => c.id === catId) || null;
 };

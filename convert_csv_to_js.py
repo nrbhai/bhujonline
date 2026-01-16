@@ -66,29 +66,129 @@ for category_name in sorted(categories_data.keys()):
     # Create category ID (lowercase, spaces to dashes)
     category_id = category_name.lower().replace(' ', '-')
     
-    # Determine icon based on category name
+    # Determine icon based on category name - Comprehensive mapping
     icon_map = {
+        # Services
         'electrician': '⚡',
         'plumber': '🔧',
         'carpenter': '🪚',
         'painter': '🎨',
         'ac service': '❄️',
+        'ac/fridge repair': '❄️',
+        'pest control': '🐛',
+        'interior designer': '🏠',
+        'mason': '🧱',
+        'welder': '🔥',
+        'mechanic': '🔧',
+        'cleaning service': '🧹',
+        
+        # Health & Medical
         'medical': '🏥',
         'doctor': '👨‍⚕️',
         'hospital': '🏥',
+        'hospitals': '🏥',
+        'clinic': '🏥',
+        'pharmacy': '💊',
+        'opticians': '👓',
+        'dental': '🦷',
+        'physiotherapy': '💪',
+        
+        # Transportation
         'taxi': '🚕',
         'auto': '🛺',
-        'lawyer': '⚖️',
-        'computer': '💻',
-        'mobile': '📱',
-        'salon': '💇',
-        'gym': '💪',
-        'restaurant': '🍽️',
-        'hotel': '🏨',
-        'education': '📚',
-        'tuition': '📖',
         '2 wheeler garage': '🏍️',
         '4 wheeler garage': '🚗',
+        'car rental': '🚗',
+        'tours & travels': '✈️',
+        'transport': '🚛',
+        
+        # Legal & Professional
+        'lawyer': '⚖️',
+        'ca': '💼',
+        'chartered accountant': '💼',
+        'financial advisor': '💰',
+        'insurance': '🛡️',
+        'real estate': '🏢',
+        'estate agent': '🏢',
+        
+        # Technology
+        'computer': '💻',
+        'mobile': '📱',
+        'laptop repair': '💻',
+        'cctv': '📹',
+        'software': '💿',
+        'website designer': '🌐',
+        'web development': '🌐',
+        
+        # Beauty & Wellness
+        'salon': '💇',
+        'spa': '💆',
+        'gym': '💪',
+        'fitness': '💪',
+        'yoga': '🧘',
+        'beauty parlour': '💄',
+        
+        # Food & Hospitality
+        'restaurant': '🍽️',
+        'hotel': '🏨',
+        'cafe': '☕',
+        'bakery': '🍰',
+        'caterer': '🍱',
+        'sweet shop': '🍬',
+        'catering': '🍱',
+        
+        # Education
+        'education': '📚',
+        'tuition': '📖',
+        'school': '🏫',
+        'coaching': '📖',
+        'training': '📖',
+        'dance class': '💃',
+        'music class': '🎵',
+        
+        # Retail & Shopping
+        'jeweller': '💎',
+        'clothing': '👔',
+        'electronics': '📺',
+        'mobile shop': '📱',
+        'stationery': '✏️',
+        'bookstore': '📚',
+        'grocery': '🛒',
+        'supermarket': '🛒',
+        'general store': '🛒',
+        
+        # Professional Services
+        'photographer': '📸',
+        'printing': '🖨️',
+        'xerox': '📄',
+        'courier': '📦',
+        'event planner': '🎉',
+        'security': '🛡️',
+        'packers and movers': '📦',
+        
+        # Construction & Materials
+        'hardware': '🔨',
+        'building material': '🧱',
+        'steel': '🏗️',
+        'cement': '🏗️',
+        'tiles': '🏗️',
+        
+        # Agriculture & Animals
+        'veterinary': '🐾',
+        'pet shop': '🐕',
+        'agriculture': '🌾',
+        'seeds': '🌱',
+        
+        # Specialized Services
+        'astrologer': '🔮',
+        'electricals': '💡',
+        'solar panel': '☀️',
+        'water purifier': '💧',
+        'gujarati typist': '⌨️',
+        'dastavej / document writers': '📝',
+        'importers / exporters': '🌍',
+        'chartered engineer': '👷',
+        'architect': '📐',
     }
     
     icon = icon_map.get(category_name.lower(), '📋')

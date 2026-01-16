@@ -5,7 +5,7 @@ const categoriesData = [
   {
     "id": "ac/fridge-repair",
     "name": "AC/Fridge Repair",
-    "icon": "📋",
+    "icon": "❄️",
     "gu_name": "AC/Fridge Repair",
     "providers": [
       {
@@ -643,7 +643,7 @@ const categoriesData = [
   {
     "id": "dastavej-/-document-writers",
     "name": "Dastavej / Document writers",
-    "icon": "📋",
+    "icon": "📝",
     "gu_name": "Dastavej / Document writers",
     "providers": [
       {
@@ -878,7 +878,7 @@ const categoriesData = [
   {
     "id": "estate-agent",
     "name": "Estate Agent",
-    "icon": "📋",
+    "icon": "🏢",
     "gu_name": "Estate Agent",
     "providers": [
       {
@@ -974,7 +974,7 @@ const categoriesData = [
   {
     "id": "financial-advisor",
     "name": "Financial Advisor",
-    "icon": "📋",
+    "icon": "💰",
     "gu_name": "Financial Advisor",
     "providers": [
       {
@@ -1131,7 +1131,7 @@ const categoriesData = [
   {
     "id": "gujarati-typist",
     "name": "Gujarati Typist",
-    "icon": "📋",
+    "icon": "⌨️",
     "gu_name": "Gujarati Typist",
     "providers": [
       {
@@ -1208,7 +1208,7 @@ const categoriesData = [
   {
     "id": "hospitals",
     "name": "Hospitals",
-    "icon": "📋",
+    "icon": "🏥",
     "gu_name": "Hospitals",
     "providers": [
       {
@@ -1330,7 +1330,7 @@ const categoriesData = [
   {
     "id": "importers-/-exporters",
     "name": "Importers / Exporters",
-    "icon": "📋",
+    "icon": "🌍",
     "gu_name": "Importers / Exporters",
     "providers": [
       {
@@ -1444,7 +1444,7 @@ const categoriesData = [
   {
     "id": "interior-designer",
     "name": "Interior Designer",
-    "icon": "📋",
+    "icon": "🏠",
     "gu_name": "Interior Designer",
     "providers": [
       {
@@ -1478,7 +1478,7 @@ const categoriesData = [
   {
     "id": "jeweller",
     "name": "Jeweller",
-    "icon": "📋",
+    "icon": "💎",
     "gu_name": "Jeweller",
     "providers": [
       {
@@ -1921,7 +1921,7 @@ const categoriesData = [
   {
     "id": "opticians",
     "name": "Opticians",
-    "icon": "📋",
+    "icon": "👓",
     "gu_name": "Opticians",
     "providers": [
       {
@@ -1989,7 +1989,7 @@ const categoriesData = [
   {
     "id": "pest-control",
     "name": "Pest Control",
-    "icon": "📋",
+    "icon": "🐛",
     "gu_name": "Pest Control",
     "providers": [
       {
@@ -2399,7 +2399,7 @@ const categoriesData = [
   {
     "id": "stationery",
     "name": "Stationery",
-    "icon": "📋",
+    "icon": "✏️",
     "gu_name": "Stationery",
     "providers": [
       {
@@ -2660,7 +2660,7 @@ const categoriesData = [
   {
     "id": "tours-&-travels",
     "name": "Tours & Travels",
-    "icon": "📋",
+    "icon": "✈️",
     "gu_name": "Tours & Travels",
     "providers": [
       {

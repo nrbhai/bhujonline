@@ -61,6 +61,56 @@ nav a:hover {
     padding: 12px;
 }
 
+@media (max-width: 600px) {
+    .container {
+        padding: 6px; /* Even tighter */
+    }
+    
+    header {
+        margin-bottom: 8px !important; 
+    }
+
+    header img {
+        height: 100px !important; /* Even smaller logo */
+        margin-bottom: 2px !important;
+    }
+
+    header div {
+        font-size: 0.9rem !important; /* Smaller text */
+        margin-bottom: 6px !important;
+    }
+
+    .search-box-wrapper {
+        margin-bottom: 8px !important; 
+    }
+    
+    nav {
+        padding: 4px 0 !important; 
+        margin-bottom: 5px !important;
+    }
+    
+    .search-box {
+        padding: 10px 14px !important;
+    }
+
+    /* Target the subtitle paragraphs specifically on homepage */
+    header div p {
+        margin: 0 !important;
+        font-size: 0.85rem !important;
+    }
+
+    /* Reduce spacing for category title on category.html */
+    #category-title {
+        margin-bottom: 8px !important;
+        font-size: 1.25rem !important;
+    }
+    
+    .back-link {
+        margin-bottom: 4px !important;
+        font-size: 0.8rem !important;
+    }
+}
+
 /* ... existing code ... */
 
 @media (min-width: 900px) { /* Desktop */

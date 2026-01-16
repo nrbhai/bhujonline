@@ -972,10 +972,10 @@ const categoriesData = [
     ]
   },
   {
-    "id": "financial-advisors",
-    "name": "Financial Advisors",
+    "id": "financial-advisor",
+    "name": "Financial Advisor",
     "icon": "📋",
-    "gu_name": "Financial Advisors",
+    "gu_name": "Financial Advisor",
     "providers": [
       {
         "name": "Abhay Joshi",

@@ -9,8 +9,8 @@ js_file = 'assets/js/data.js'
 # Parse CSV and organize by category
 categories_data = defaultdict(lambda: {'providers': [], 'seen': set()})
 
-# Try different encodings
-encodings = ['utf-8', 'latin-1', 'cp1252', 'iso-8859-1']
+# Try different encodings (utf-8-sig handles BOM)
+encodings = ['utf-8-sig', 'utf-8', 'latin-1', 'cp1252', 'iso-8859-1']
 data_rows = []
 
 for encoding in encodings:
@@ -20,7 +20,7 @@ for encoding in encodings:
             data_rows = list(reader)
         print(f"✅ Successfully read CSV with {encoding} encoding")
         break
-    except UnicodeDecodeError:
+    except (UnicodeDecodeError, KeyError):
         continue
 else:
     print("❌ Could not read CSV with any encoding")

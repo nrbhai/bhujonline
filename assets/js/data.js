@@ -73,10 +73,10 @@ const categoriesData = [
     ]
   },
   {
-    "id": "agricultural-implements",
-    "name": "Agricultural Implements",
-    "icon": "🚜",
-    "gu_name": "ખેતી સાધનો",
+    "id": "agricultural-equipments",
+    "name": "Agricultural Equipments",
+    "icon": "📋",
+    "gu_name": "Agricultural Equipments",
     "providers": [
       {
         "name": "",
@@ -85,6 +85,51 @@ const categoriesData = [
         "tags": [
           "Test"
         ],
+        "webpage": ""
+      }
+    ]
+  },
+  {
+    "id": "allopathy-doctors-mbbs",
+    "name": "Allopathy Doctors MBBS",
+    "icon": "📋",
+    "gu_name": "Allopathy Doctors MBBS",
+    "providers": [
+      {
+        "name": "Sample Trader",
+        "phone": "9999999999",
+        "area": "Bhuj",
+        "tags": [],
+        "webpage": ""
+      }
+    ]
+  },
+  {
+    "id": "allopathy-doctors-md-(-specialist-)",
+    "name": "Allopathy Doctors MD ( Specialist )",
+    "icon": "📋",
+    "gu_name": "Allopathy Doctors MD ( Specialist )",
+    "providers": [
+      {
+        "name": "Sample Trader",
+        "phone": "9999999999",
+        "area": "Bhuj",
+        "tags": [],
+        "webpage": ""
+      }
+    ]
+  },
+  {
+    "id": "allopathy-doctors-md-physician",
+    "name": "Allopathy Doctors MD Physician",
+    "icon": "📋",
+    "gu_name": "Allopathy Doctors MD Physician",
+    "providers": [
+      {
+        "name": "Sample Trader",
+        "phone": "9999999999",
+        "area": "Bhuj",
+        "tags": [],
         "webpage": ""
       }
     ]
@@ -141,23 +186,6 @@ const categoriesData = [
     ]
   },
   {
-    "id": "astrology/vaastu",
-    "name": "Astrology/Vaastu",
-    "icon": "🔮",
-    "gu_name": "જ્યોતિષ/વાસ્તુ",
-    "providers": [
-      {
-        "name": "",
-        "phone": "123",
-        "area": "Bhuj",
-        "tags": [
-          "Test"
-        ],
-        "webpage": ""
-      }
-    ]
-  },
-  {
     "id": "auto/taxi",
     "name": "Auto/Taxi",
     "icon": "🚕",
@@ -179,6 +207,21 @@ const categoriesData = [
         "tags": [
           "Taxi"
         ],
+        "webpage": ""
+      }
+    ]
+  },
+  {
+    "id": "ayurvedic-doctors",
+    "name": "Ayurvedic Doctors",
+    "icon": "📋",
+    "gu_name": "Ayurvedic Doctors",
+    "providers": [
+      {
+        "name": "Sample Trader",
+        "phone": "9999999999",
+        "area": "Bhuj",
+        "tags": [],
         "webpage": ""
       }
     ]
@@ -279,10 +322,10 @@ const categoriesData = [
     ]
   },
   {
-    "id": "ca/tax-consultants",
-    "name": "CA/Tax Consultants",
-    "icon": "💼",
-    "gu_name": "સીએ/ટેક્સ સલાહકાર",
+    "id": "ca-(-chartered-accountants-)",
+    "name": "CA ( Chartered Accountants )",
+    "icon": "📋",
+    "gu_name": "CA ( Chartered Accountants )",
     "providers": [
       {
         "name": "",
@@ -391,8 +434,8 @@ const categoriesData = [
     ]
   },
   {
-    "id": "caterars",
-    "name": "Caterars",
+    "id": "caterers",
+    "name": "Caterers",
     "icon": "🍱",
     "gu_name": "કેટરિંગ",
     "providers": [
@@ -404,15 +447,7 @@ const categoriesData = [
           "Caterars"
         ],
         "webpage": ""
-      }
-    ]
-  },
-  {
-    "id": "caterers",
-    "name": "Caterers",
-    "icon": "🍱",
-    "gu_name": "કેટરિંગ",
-    "providers": [
+      },
       {
         "name": "",
         "phone": "123",
@@ -466,7 +501,7 @@ const categoriesData = [
         "webpage": ""
       },
       {
-        "name": "Rivaans Fashion Hub / Rupal S Thacker",
+        "name": "Rivaan’s Fashion Hub / Rupal S Thacker",
         "phone": "9374205551",
         "area": "Bhuj",
         "tags": [
@@ -1138,6 +1173,21 @@ const categoriesData = [
     ]
   },
   {
+    "id": "hair-stylist-(-m-/-f-)",
+    "name": "Hair Stylist ( M / F )",
+    "icon": "📋",
+    "gu_name": "Hair Stylist ( M / F )",
+    "providers": [
+      {
+        "name": "Sample Trader",
+        "phone": "9999999999",
+        "area": "Bhuj",
+        "tags": [],
+        "webpage": ""
+      }
+    ]
+  },
+  {
     "id": "hardware-stores",
     "name": "Hardware Stores",
     "icon": "🔨",
@@ -1150,6 +1200,21 @@ const categoriesData = [
         "tags": [
           "Test"
         ],
+        "webpage": ""
+      }
+    ]
+  },
+  {
+    "id": "homeopathy-doctors",
+    "name": "Homeopathy Doctors",
+    "icon": "📋",
+    "gu_name": "Homeopathy Doctors",
+    "providers": [
+      {
+        "name": "Sample Trader",
+        "phone": "9999999999",
+        "area": "Bhuj",
+        "tags": [],
         "webpage": ""
       }
     ]
@@ -1286,40 +1351,6 @@ const categoriesData = [
     ]
   },
   {
-    "id": "house/shop-rentals",
-    "name": "House/Shop Rentals",
-    "icon": "🏘️",
-    "gu_name": "ઘર/દુકાન ભાડે",
-    "providers": [
-      {
-        "name": "",
-        "phone": "123",
-        "area": "Bhuj",
-        "tags": [
-          "Test"
-        ],
-        "webpage": ""
-      }
-    ]
-  },
-  {
-    "id": "ice-delivery",
-    "name": "Ice Delivery",
-    "icon": "🧊",
-    "gu_name": "બરફ ડિલિવરી",
-    "providers": [
-      {
-        "name": "",
-        "phone": "123",
-        "area": "Bhuj",
-        "tags": [
-          "Test"
-        ],
-        "webpage": ""
-      }
-    ]
-  },
-  {
     "id": "importers-/-exporters",
     "name": "Importers / Exporters",
     "icon": "🌍",
@@ -1386,14 +1417,23 @@ const categoriesData = [
           "Insurance Agent"
         ],
         "webpage": ""
+      },
+      {
+        "name": "Hiral Thacker",
+        "phone": "9879359789",
+        "area": "Bhuj",
+        "tags": [
+          "Insurance Manager"
+        ],
+        "webpage": ""
       }
     ]
   },
   {
-    "id": "insurance-agents",
-    "name": "Insurance Agents",
-    "icon": "🛡️",
-    "gu_name": "વીમા એજન્ટ",
+    "id": "insurance-companies",
+    "name": "Insurance Companies",
+    "icon": "📋",
+    "gu_name": "Insurance Companies",
     "providers": [
       {
         "name": "LIC of India",
@@ -1419,15 +1459,6 @@ const categoriesData = [
         "area": "RTO Relocation",
         "tags": [
           "Life|Health"
-        ],
-        "webpage": ""
-      },
-      {
-        "name": "Hiral Thacker",
-        "phone": "9879359789",
-        "area": "Bhuj",
-        "tags": [
-          "Insurance Manager"
         ],
         "webpage": ""
       }
@@ -1479,23 +1510,6 @@ const categoriesData = [
         "area": "Bhuj",
         "tags": [
           "Jeweller"
-        ],
-        "webpage": ""
-      }
-    ]
-  },
-  {
-    "id": "jewellers",
-    "name": "Jewellers",
-    "icon": "💎",
-    "gu_name": "સોની",
-    "providers": [
-      {
-        "name": "",
-        "phone": "123",
-        "area": "Bhuj",
-        "tags": [
-          "Test"
         ],
         "webpage": ""
       }
@@ -1836,23 +1850,6 @@ const categoriesData = [
         "area": "Bhuj",
         "tags": [
           "Notary"
-        ],
-        "webpage": ""
-      }
-    ]
-  },
-  {
-    "id": "notary/legal-services",
-    "name": "Notary/Legal Services",
-    "icon": "📜",
-    "gu_name": "નોટરી સેવા",
-    "providers": [
-      {
-        "name": "",
-        "phone": "123",
-        "area": "Bhuj",
-        "tags": [
-          "Test"
         ],
         "webpage": ""
       }
@@ -2423,23 +2420,6 @@ const categoriesData = [
     ]
   },
   {
-    "id": "sweet-shops/mithai",
-    "name": "Sweet Shops/Mithai",
-    "icon": "🍬",
-    "gu_name": "મીઠાઈની દુકાન",
-    "providers": [
-      {
-        "name": "",
-        "phone": "123",
-        "area": "Bhuj",
-        "tags": [
-          "Test"
-        ],
-        "webpage": ""
-      }
-    ]
-  },
-  {
     "id": "sweet-shop-/-mithai",
     "name": "Sweet shop / Mithai",
     "icon": "🍬",
@@ -2810,33 +2790,6 @@ const categoriesData = [
     "gu_name": "વેબસાઇટ ડિઝાઇનર",
     "providers": [
       {
-        "name": "Infinitie Technologies",
-        "phone": "9879511222",
-        "area": "Station Road",
-        "tags": [
-          "Web|App"
-        ],
-        "webpage": ""
-      },
-      {
-        "name": "WRTeam",
-        "phone": "9797945459",
-        "area": "Time Square Empire",
-        "tags": [
-          "Software|App"
-        ],
-        "webpage": ""
-      },
-      {
-        "name": "Bigimmense IT",
-        "phone": "7417890719",
-        "area": "Bhuj HO",
-        "tags": [
-          "SEO|Web"
-        ],
-        "webpage": ""
-      },
-      {
         "name": "Hari Tech Solutions",
         "phone": "9512234395",
         "area": "Bhuj",
@@ -2859,23 +2812,6 @@ const categoriesData = [
         "area": "Bhuj",
         "tags": [
           "Yoga fitness trainers"
-        ],
-        "webpage": ""
-      }
-    ]
-  },
-  {
-    "id": "yoga/fitness-trainers",
-    "name": "Yoga/Fitness Trainers",
-    "icon": "🧘",
-    "gu_name": "યોગ/ફિટનેસ ટ્રેનર",
-    "providers": [
-      {
-        "name": "",
-        "phone": "123",
-        "area": "Bhuj",
-        "tags": [
-          "Test"
         ],
         "webpage": ""
       }

@@ -58,7 +58,7 @@ nav a:hover {
 .container {
     max-width: 1200px; /* Increased to fit 6 columns */
     margin: 0 auto;
-    padding: 12px;
+    padding: 4px; /* Minimal padding to reduce blank space */
 }
 
 @media (max-width: 600px) {
@@ -126,10 +126,9 @@ nav a:hover {
 }
 
 /* Header */
-/* Header */
 header {
-    margin-bottom: 24px;
-    border-bottom: none; /* Removed heavy border */
+    margin-bottom: 5px; /* Minimal space below header */
+    border-bottom: none;
     padding-bottom: 0;
     display: flex;
     flex-direction: column;
@@ -158,7 +157,7 @@ h1 a {
 /* Search */
 .search-box-wrapper {
     position: relative;
-    margin-bottom: 24px;
+    margin-bottom: 10px; /* Reduced for tighter layout */
 }
 
 .search-box {

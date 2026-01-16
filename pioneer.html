@@ -12,398 +12,630 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pioneer Computer Services | Bhuj</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Pioneer Computer Services | Technology Excellence Since 1993</title>
+    <meta name="description" content="Pioneer Computer Services - Your trusted technology partner in Bhuj since 1993. Expert solutions for computers, laptops, CCTV, and IT services.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <style>
-        :root {
-            --primary: #004e92;
-            --secondary: #000428;
-            --accent: #f9a825;
-            --text-light: #f4f4f4;
-            --text-dark: #333;
-            --gray-bg: #f9f9f9;
-        }
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --accent-color: #667eea;
+            --text-dark: #1a202c;
+            --text-light: #718096;
+            --bg-light: #f7fafc;
+        }
+
         body {
-            font-family: 'Roboto', sans-serif;
-            line-height: 1.6;
+            font-family: 'Inter', sans-serif;
+            background: #ffffff;
             color: var(--text-dark);
-            scroll-behavior: smooth;
+            line-height: 1.6;
+            overflow-x: hidden;
         }
 
-        /* --- Header --- */
-        header {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 1rem 5%;
+        /* Animated Background */
+        .bg-shapes {
             position: fixed;
-            width: 100%;
             top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+            pointer-events: none;
         }
 
-        .logo {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.5rem;
-            font-weight: 800;
-            color: var(--primary);
-            text-transform: uppercase;
+        .shape {
+            position: absolute;
+            opacity: 0.05;
+            animation: float 20s infinite ease-in-out;
         }
 
-        .logo span {
-            color: var(--accent);
+        .shape-1 {
+            top: 10%;
+            left: 10%;
+            width: 300px;
+            height: 300px;
+            background: var(--primary-gradient);
+            border-radius: 50%;
+            animation-delay: 0s;
         }
 
-        nav ul {
-            display: flex;
-            list-style: none;
+        .shape-2 {
+            top: 60%;
+            right: 10%;
+            width: 250px;
+            height: 250px;
+            background: var(--secondary-gradient);
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            animation-delay: 3s;
         }
 
-        nav ul li {
-            margin-left: 2rem;
+        .shape-3 {
+            bottom: 10%;
+            left: 50%;
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            border-radius: 50%;
+            animation-delay: 6s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            33% { transform: translate(30px, -30px) rotate(120deg); }
+            66% { transform: translate(-20px, 20px) rotate(240deg); }
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Navigation */
+        nav {
+            padding: 20px 0;
+            margin-bottom: 40px;
         }
 
         nav a {
-            text-decoration: none;
-            color: var(--secondary);
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1rem;
             font-weight: 600;
-            transition: color 0.3s;
+            color: var(--accent-color);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
         }
 
         nav a:hover {
-            color: var(--primary);
+            transform: translateX(-5px);
+            color: #764ba2;
         }
 
-        /* --- Hero Section --- */
-        .hero {
-            height: 100vh;
-            background: linear-gradient(rgba(0, 4, 40, 0.7), rgba(0, 78, 146, 0.7)), 
-                        url('https://images.unsplash.com/photo-1517433456452-f9633a875f6f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        /* Header */
+        header {
             text-align: center;
-            color: var(--text-light);
-            padding: 0 1rem;
+            padding: 60px 0;
+            margin-bottom: 60px;
         }
 
-        .hero-content h1 {
-            font-family: 'Montserrat', sans-serif;
+        .logo {
+            font-family: 'Space Grotesk', sans-serif;
             font-size: 3.5rem;
-            margin-bottom: 1rem;
-            animation: fadeIn 1.5s ease-in-out;
+            font-weight: 700;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 15px;
+            animation: slideDown 0.8s ease-out;
         }
 
-        .hero-content p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
-        .badge {
-            background: var(--accent);
-            color: var(--secondary);
-            padding: 5px 15px;
-            border-radius: 50px;
-            font-weight: bold;
-            font-size: 0.9rem;
+        .tagline {
+            font-size: 1.3rem;
+            color: var(--text-light);
+            font-weight: 500;
+            animation: fadeIn 1s ease-out 0.3s both;
+        }
+
+        .since-badge {
             display: inline-block;
-            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+            border: 2px solid var(--accent-color);
+            color: var(--accent-color);
+            padding: 8px 24px;
+            border-radius: 50px;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+            font-size: 0.95rem;
+            margin-top: 20px;
+            animation: fadeIn 1s ease-out 0.6s both;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Hero Section */
+        .hero {
+            background: var(--primary-gradient);
+            border-radius: 30px;
+            padding: 80px 50px;
+            text-align: center;
+            margin-bottom: 80px;
+            box-shadow: 0 30px 60px -12px rgba(102, 126, 234, 0.35);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+            transform: rotate(45deg);
+            animation: shine 3s infinite;
+        }
+
+        @keyframes shine {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+
+        .hero h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 3.2rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero p {
+            font-size: 1.4rem;
+            color: rgba(255, 255, 255, 0.95);
+            max-width: 750px;
+            margin: 0 auto 40px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 1;
         }
 
         .btn {
-            display: inline-block;
-            background: var(--primary);
-            color: white;
-            padding: 12px 30px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: background 0.3s;
-            border: 2px solid var(--primary);
-        }
-
-        .btn:hover {
-            background: transparent;
-            color: white;
-        }
-
-        /* --- Mission Section --- */
-        .mission {
-            padding: 4rem 5%;
-            background: white;
-            text-align: center;
-        }
-
-        .mission h2 {
-            font-family: 'Montserrat', sans-serif;
-            color: var(--primary);
-            margin-bottom: 1.5rem;
-            font-size: 2.5rem;
-        }
-
-        .mission-box {
-            background: var(--gray-bg);
-            padding: 2rem;
-            border-left: 5px solid var(--accent);
-            max-width: 800px;
-            margin: 0 auto;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        }
-
-        .mission-box p {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 40px;
+            border-radius: 50px;
+            font-family: 'Space Grotesk', sans-serif;
             font-size: 1.1rem;
-            font-style: italic;
-            color: #555;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: none;
+            cursor: pointer;
         }
 
-        /* --- Products & Services --- */
-        .services {
-            padding: 4rem 5%;
-            background: var(--gray-bg);
+        .btn-primary {
+            background: white;
+            color: var(--accent-color);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-4px) scale(1.05);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid white;
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-4px) scale(1.05);
+        }
+
+        /* Services Grid */
+        .section {
+            margin-bottom: 100px;
         }
 
         .section-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.8rem;
+            font-weight: 700;
             text-align: center;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: var(--secondary);
+            margin-bottom: 60px;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
-        .grid {
+        .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
         }
 
-        .card {
+        .service-card {
             background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease;
+            border-radius: 24px;
+            padding: 40px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 2px solid #f0f0f0;
+            position: relative;
+            overflow: hidden;
         }
 
-        .card:hover {
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--primary-gradient);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .service-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 20px 60px rgba(102, 126, 234, 0.25);
+            border-color: var(--accent-color);
         }
 
-        .card i {
-            font-size: 3rem;
-            color: var(--primary);
-            margin-bottom: 1rem;
+        .service-card:hover::before {
+            transform: scaleX(1);
         }
 
-        .card h3 {
-            margin-bottom: 1rem;
-            font-size: 1.25rem;
+        .service-icon {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            display: block;
         }
 
-        /* --- Stats Row --- */
-        .stats {
-            background: var(--secondary);
-            color: white;
-            padding: 3rem 5%;
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            text-align: center;
+        .service-card h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 15px;
         }
 
-        .stat-item {
-            margin: 1rem;
+        .service-card p {
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 20px;
         }
 
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: var(--accent);
-        }
-
-        /* --- Footer --- */
-        footer {
-            background: #111;
-            color: #aaa;
-            padding: 3rem 5% 1rem;
-        }
-
-        .footer-content {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            margin-bottom: 2rem;
-        }
-
-        .footer-col {
-            flex: 1;
-            min-width: 250px;
-            margin-bottom: 1rem;
-        }
-
-        .footer-col h4 {
-            color: white;
-            margin-bottom: 1rem;
-        }
-
-        .footer-col ul {
+        .service-features {
             list-style: none;
         }
-        
-        .footer-col ul li {
-            margin-bottom: 0.5rem;
+
+        .service-features li {
+            color: var(--text-light);
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+            font-weight: 500;
         }
 
-        .contact-info i {
-            margin-right: 10px;
-            color: var(--accent);
+        .service-features li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            font-weight: bold;
+            font-size: 1.2rem;
         }
 
-        .copyright {
+        /* Contact Section */
+        .contact-card {
+            background: var(--primary-gradient);
+            border-radius: 30px;
+            padding: 70px 50px;
             text-align: center;
-            border-top: 1px solid #333;
-            padding-top: 1rem;
-            font-size: 0.9rem;
+            box-shadow: 0 30px 60px -12px rgba(102, 126, 234, 0.35);
         }
 
-        /* Responsive Fixes */
-        @media (max-width: 768px) {
-            .hero-content h1 { font-size: 2.5rem; }
-            nav { display: none; } /* Simplified for single page demo */
+        .contact-card h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 30px;
         }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 1.2rem;
+            color: white;
+            font-weight: 500;
+        }
+
+        .contact-item a {
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .contact-item a:hover {
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+            transform: scale(1.05);
+        }
+
+        .location {
+            color: rgba(255, 255, 255, 0.9);
+            margin-top: 20px;
+            font-size: 1.1rem;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: var(--text-light);
+            border-top: 1px solid #e0e0e0;
+            margin-top: 80px;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 2.5rem;
+            }
+
+            .hero {
+                padding: 50px 30px;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .section-title {
+                font-size: 2.2rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-card {
+                padding: 50px 30px;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .btn {
+                font-size: 1rem;
+                padding: 14px 32px;
+            }
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Animations on Scroll */
+        .fade-in {
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Animated Background Shapes -->
+    <div class="bg-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
 
-    <header>
-        <div class="logo">Pioneer <span>CS</span></div>
+    <div class="container">
+        <!-- Navigation -->
         <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#mission">Mission</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+            <a href="index.html">← Back to Bhuj Online</a>
         </nav>
-    </header>
 
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <span class="badge">Serving Bhuj Since 1993</span>
+        <!-- Header -->
+        <header>
+            <div class="logo">Pioneer Computer Services</div>
+            <div class="tagline">Your Trusted Technology Partner in Bhuj</div>
+            <div class="since-badge">🏆 Serving Since 1993</div>
+        </header>
+
+        <!-- Hero Section -->
+        <div class="hero">
             <h1>Technology Solutions You Can Trust</h1>
-            <p>Your one-stop destination for Computers, Laptops, CCTV, and expert repairs. We bring over 30 years of experience to your doorstep.</p>
-            <a href="#contact" class="btn">Get a Quote</a>
+            <p>Over 30 years of excellence in delivering cutting-edge IT solutions. From computers and laptops to CCTV and comprehensive IT services.</p>
+            <div class="hero-buttons">
+                <a href="tel:9825034580" class="btn btn-primary">
+                    📞 Call: 9825034580
+                </a>
+                <a href="https://wa.me/919825034580" target="_blank" class="btn btn-secondary">
+                    💬 WhatsApp Us
+                </a>
+            </div>
         </div>
-    </section>
 
-    <section class="mission" id="mission">
-        <h2>Our Mission</h2>
-        <div class="mission-box">
-            <p>"To empower the Bhuj community with reliable, cutting-edge technology and unmatched service support. We are dedicated to providing honest advice, quality products, and swift solutions to keep your digital world running smoothly."</p>
-        </div>
-    </section>
+        <!-- Services Section -->
+        <div class="section">
+            <h2 class="section-title">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <span class="service-icon">💻</span>
+                    <h3>Computer Systems</h3>
+                    <p>Custom-built desktops for gaming, office work, and professional use. Top brands and assembled PCs available.</p>
+                    <ul class="service-features">
+                        <li>Gaming PCs</li>
+                        <li>Office Workstations</li>
+                        <li>Custom Builds</li>
+                        <li>Branded Systems</li>
+                    </ul>
+                </div>
 
-    <section class="services" id="services">
-        <h2 class="section-title">What We Offer</h2>
-        <div class="grid">
-            <div class="card">
-                <i class="fas fa-desktop"></i>
-                <h3>Computer Systems</h3>
-                <p>Custom-built desktops for gaming, office work, and graphic design. Top brands and assembled PCs available.</p>
-            </div>
-            <div class="card">
-                <i class="fas fa-laptop"></i>
-                <h3>Laptops</h3>
-                <p>Latest models from HP, Dell, Lenovo, and Asus. Sales of new units and chip-level repairing.</p>
-            </div>
-            <div class="card">
-                <i class="fas fa-video"></i>
-                <h3>CCTV Security</h3>
-                <p>Secure your home and business. Professional installation of HD and IP cameras with remote viewing.</p>
-            </div>
-            <div class="card">
-                <i class="fas fa-print"></i>
-                <h3>Printers & Peripherals</h3>
-                <p>LaserJet, InkTank, and Dot Matrix printers. We also stock cartridges, toner, and accessories.</p>
-            </div>
-            <div class="card">
-                <i class="fas fa-tools"></i>
-                <h3>Expert Service</h3>
-                <p>Facing slowdowns or viruses? Our expert technicians provide quick diagnostics and repairs.</p>
-            </div>
-            <div class="card">
-                <i class="fas fa-network-wired"></i>
-                <h3>Networking</h3>
-                <p>Office LAN setup, Wi-Fi router configuration, and structured cabling solutions.</p>
-            </div>
-        </div>
-    </section>
+                <div class="service-card fade-in" style="animation-delay: 0.1s;">
+                    <span class="service-icon">💼</span>
+                    <h3>Laptops</h3>
+                    <p>Latest models from HP, Dell, Lenovo, and Asus. Expert chip-level repair services.</p>
+                    <ul class="service-features">
+                        <li>New Laptop Sales</li>
+                        <li>Chip-Level Repair</li>
+                        <li>Upgrades & Maintenance</li>
+                        <li>All Major Brands</li>
+                    </ul>
+                </div>
 
-    <section class="stats">
-        <div class="stat-item">
-            <div class="stat-number">30+</div>
-            <div>Years Experience</div>
-        </div>
-        <div class="stat-item">
-            <div class="stat-number">5000+</div>
-            <div>Happy Customers</div>
-        </div>
-        <div class="stat-item">
-            <div class="stat-number">100%</div>
-            <div>Service Guarantee</div>
-        </div>
-    </section>
+                <div class="service-card fade-in" style="animation-delay: 0.2s;">
+                    <span class="service-icon">📹</span>
+                    <h3>CCTV Security</h3>
+                    <p>Protect your home and business with professional CCTV installation and monitoring.</p>
+                    <ul class="service-features">
+                        <li>HD & IP Cameras</li>
+                        <li>Remote Viewing</li>
+                        <li>Professional Installation</li>
+                        <li>24/7 Recording</li>
+                    </ul>
+                </div>
 
-    <footer id="contact">
-        <div class="footer-content">
-            <div class="footer-col">
-                <h4>Pioneer Computer Services</h4>
-                <p>Providing quality IT solutions in Kutch since 1993. We prioritize customer satisfaction above all else.</p>
-            </div>
-            <div class="footer-col">
-                <h4>Our Services</h4>
-                <ul>
-                    <li>Computer Sales</li>
-                    <li>Laptop Repair</li>
-                    <li>CCTV Installation</li>
-                    <li>AMC Services</li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Contact Us</h4>
-                <div class="contact-info">
-                    <p><i class="fas fa-map-marker-alt"></i> Station Road, Bhuj, Kutch - 370001</p>
-                    <p><i class="fas fa-phone"></i> +91 98250 34580</p>
-                    <p><i class="fas fa-envelope"></i> pioneerbhuj@gmail.com</p>
+                <div class="service-card fade-in" style="animation-delay: 0.3s;">
+                    <span class="service-icon">🖨️</span>
+                    <h3>Printers & Peripherals</h3>
+                    <p>Complete range of printing solutions and accessories for your business needs.</p>
+                    <ul class="service-features">
+                        <li>LaserJet & InkTank</li>
+                        <li>Dot Matrix Printers</li>
+                        <li>Cartridges & Toner</li>
+                        <li>Accessories</li>
+                    </ul>
+                </div>
+
+                <div class="service-card fade-in" style="animation-delay: 0.4s;">
+                    <span class="service-icon">🔧</span>
+                    <h3>Expert Repair Services</h3>
+                    <p>Quick diagnostics and professional repairs by our experienced technicians.</p>
+                    <ul class="service-features">
+                        <li>Hardware Repairs</li>
+                        <li>Software Solutions</li>
+                        <li>Virus Removal</li>
+                        <li>Data Recovery</li>
+                    </ul>
+                </div>
+
+                <div class="service-card fade-in" style="animation-delay: 0.5s;">
+                    <span class="service-icon">🌐</span>
+                    <h3>Networking Solutions</h3>
+                    <p>Professional network setup and maintenance for homes and businesses.</p>
+                    <ul class="service-features">
+                        <li>LAN Setup</li>
+                        <li>Wi-Fi Configuration</li>
+                        <li>Structured Cabling</li>
+                        <li>Network Security</li>
+                    </ul>
                 </div>
             </div>
         </div>
-        <div class="copyright">
-            <p>&copy; 2026 Pioneer Computer Services. All Rights Reserved.</p>
-        </div>
-    </footer>
 
+        <!-- Contact Section -->
+        <div class="contact-card">
+            <h2>Let's Connect</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    📞 <a href="tel:9825034580">9825034580</a>
+                </div>
+                <div class="contact-item">
+                    💬 <a href="https://wa.me/919825034580" target="_blank">WhatsApp</a>
+                </div>
+            </div>
+            <p class="location">📍 Station Road, Bhuj, Kutch - 370001</p>
+            <p class="location" style="margin-top: 30px; font-size: 1rem;">🌟 30+ Years of Excellence | 5000+ Happy Customers | 100% Service Guarantee</p>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>© 2026 Pioneer Computer Services. All Rights Reserved.</p>
+            <p>Professional IT Solutions in Bhuj Since 1993</p>
+        </footer>
+    </div>
 </body>
 </html>

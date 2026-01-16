@@ -3,10 +3,10 @@
 
 const categoriesData = [
   {
-    "id": "ac-fridge-repairer",
-    "name": "Ac fridge repairer",
+    "id": "ac/fridge-repair",
+    "name": "AC/Fridge Repair",
     "icon": "📋",
-    "gu_name": "એસી/ફ્રિજ રિપેરર",
+    "gu_name": "AC/Fridge Repair",
     "providers": [
       {
         "name": "Mannubhai AC Repair",
@@ -34,7 +34,15 @@ const categoriesData = [
           "Fridge"
         ],
         "webpage": ""
-      },
+      }
+    ]
+  },
+  {
+    "id": "ac-fridge-repairer",
+    "name": "Ac fridge repairer",
+    "icon": "📋",
+    "gu_name": "Ac fridge repairer",
+    "providers": [
       {
         "name": "Lunai electronics&refrigeration",
         "phone": "9825758132",
@@ -58,8 +66,8 @@ const categoriesData = [
   {
     "id": "accounting-services",
     "name": "Accounting services",
-    "icon": "💼",
-    "gu_name": "એકાઉન્ટિંગ સેવા",
+    "icon": "📋",
+    "gu_name": "Accounting services",
     "providers": [
       {
         "name": "NIRAV A MAJETHIYA AND ASSOCIATES",
@@ -73,10 +81,10 @@ const categoriesData = [
     ]
   },
   {
-    "id": "agricultural-equipments",
-    "name": "Agricultural Equipments",
+    "id": "agricultural-implements",
+    "name": "Agricultural Implements",
     "icon": "📋",
-    "gu_name": "Agricultural Equipments",
+    "gu_name": "Agricultural Implements",
     "providers": [
       {
         "name": "",
@@ -90,55 +98,10 @@ const categoriesData = [
     ]
   },
   {
-    "id": "allopathy-doctors-mbbs",
-    "name": "Allopathy Doctors MBBS",
-    "icon": "📋",
-    "gu_name": "Allopathy Doctors MBBS",
-    "providers": [
-      {
-        "name": "Sample Trader",
-        "phone": "9999999999",
-        "area": "Bhuj",
-        "tags": [],
-        "webpage": ""
-      }
-    ]
-  },
-  {
-    "id": "allopathy-doctors-md-(-specialist-)",
-    "name": "Allopathy Doctors MD ( Specialist )",
-    "icon": "📋",
-    "gu_name": "Allopathy Doctors MD ( Specialist )",
-    "providers": [
-      {
-        "name": "Sample Trader",
-        "phone": "9999999999",
-        "area": "Bhuj",
-        "tags": [],
-        "webpage": ""
-      }
-    ]
-  },
-  {
-    "id": "allopathy-doctors-md-physician",
-    "name": "Allopathy Doctors MD Physician",
-    "icon": "📋",
-    "gu_name": "Allopathy Doctors MD Physician",
-    "providers": [
-      {
-        "name": "Sample Trader",
-        "phone": "9999999999",
-        "area": "Bhuj",
-        "tags": [],
-        "webpage": ""
-      }
-    ]
-  },
-  {
     "id": "aluminium-fabrication",
     "name": "Aluminium Fabrication",
-    "icon": "🔩",
-    "gu_name": "એલ્યુમિનિયમ ફેબ્રિકેશન",
+    "icon": "📋",
+    "gu_name": "Aluminium Fabrication",
     "providers": [
       {
         "name": "",
@@ -154,8 +117,8 @@ const categoriesData = [
   {
     "id": "ambulance",
     "name": "Ambulance",
-    "icon": "🚑",
-    "gu_name": "એમ્બ્યુલન્સ",
+    "icon": "📋",
+    "gu_name": "Ambulance",
     "providers": [
       {
         "name": "",
@@ -171,8 +134,8 @@ const categoriesData = [
   {
     "id": "astrologer-/-vaastu",
     "name": "Astrologer / Vaastu",
-    "icon": "🔮",
-    "gu_name": "જ્યોતિષી/વાસ્તુ",
+    "icon": "📋",
+    "gu_name": "Astrologer / Vaastu",
     "providers": [
       {
         "name": "Arvind Jobanputra",
@@ -186,10 +149,27 @@ const categoriesData = [
     ]
   },
   {
+    "id": "astrology/vaastu",
+    "name": "Astrology/Vaastu",
+    "icon": "📋",
+    "gu_name": "Astrology/Vaastu",
+    "providers": [
+      {
+        "name": "",
+        "phone": "123",
+        "area": "Bhuj",
+        "tags": [
+          "Test"
+        ],
+        "webpage": ""
+      }
+    ]
+  },
+  {
     "id": "auto/taxi",
     "name": "Auto/Taxi",
-    "icon": "🚕",
-    "gu_name": "ઓટો/ટેક્સી",
+    "icon": "📋",
+    "gu_name": "Auto/Taxi",
     "providers": [
       {
         "name": "Raju Auto",
@@ -212,25 +192,10 @@ const categoriesData = [
     ]
   },
   {
-    "id": "ayurvedic-doctors",
-    "name": "Ayurvedic Doctors",
-    "icon": "📋",
-    "gu_name": "Ayurvedic Doctors",
-    "providers": [
-      {
-        "name": "Sample Trader",
-        "phone": "9999999999",
-        "area": "Bhuj",
-        "tags": [],
-        "webpage": ""
-      }
-    ]
-  },
-  {
     "id": "babysitters",
     "name": "Babysitters",
-    "icon": "👶",
-    "gu_name": "બેબીસીટર",
+    "icon": "📋",
+    "gu_name": "Babysitters",
     "providers": [
       {
         "name": "",
@@ -246,8 +211,8 @@ const categoriesData = [
   {
     "id": "banks",
     "name": "Banks",
-    "icon": "🏦",
-    "gu_name": "બેંક",
+    "icon": "📋",
+    "gu_name": "Banks",
     "providers": [
       {
         "name": "State Bank of India",
@@ -290,8 +255,8 @@ const categoriesData = [
   {
     "id": "bike/scooter-repair",
     "name": "Bike/Scooter Repair",
-    "icon": "🏍️",
-    "gu_name": "બાઇક/સ્કૂટર રિપેર",
+    "icon": "📋",
+    "gu_name": "Bike/Scooter Repair",
     "providers": [
       {
         "name": "",
@@ -307,8 +272,8 @@ const categoriesData = [
   {
     "id": "blood-bank",
     "name": "Blood Bank",
-    "icon": "🩸",
-    "gu_name": "બ્લડ બેંક",
+    "icon": "📋",
+    "gu_name": "Blood Bank",
     "providers": [
       {
         "name": "",
@@ -322,10 +287,10 @@ const categoriesData = [
     ]
   },
   {
-    "id": "ca-(-chartered-accountants-)",
-    "name": "CA ( Chartered Accountants )",
+    "id": "ca/tax-consultants",
+    "name": "CA/Tax Consultants",
     "icon": "📋",
-    "gu_name": "CA ( Chartered Accountants )",
+    "gu_name": "CA/Tax Consultants",
     "providers": [
       {
         "name": "",
@@ -341,8 +306,8 @@ const categoriesData = [
   {
     "id": "cctv-installation",
     "name": "CCTV Installation",
-    "icon": "📹",
-    "gu_name": "સીસીટીવી ઇન્સ્ટોલેશન",
+    "icon": "📋",
+    "gu_name": "CCTV Installation",
     "providers": [
       {
         "name": "Pioneer Computer Services",
@@ -358,8 +323,8 @@ const categoriesData = [
   {
     "id": "car-mechanic",
     "name": "Car Mechanic",
-    "icon": "🚗",
-    "gu_name": "કાર મિકેનિક",
+    "icon": "📋",
+    "gu_name": "Car Mechanic",
     "providers": [
       {
         "name": "",
@@ -375,8 +340,8 @@ const categoriesData = [
   {
     "id": "caretakers/elder-care",
     "name": "Caretakers/Elder Care",
-    "icon": "👴",
-    "gu_name": "કેરટેકર",
+    "icon": "📋",
+    "gu_name": "Caretakers/Elder Care",
     "providers": [
       {
         "name": "",
@@ -393,7 +358,7 @@ const categoriesData = [
     "id": "carpenter",
     "name": "Carpenter",
     "icon": "🪚",
-    "gu_name": "સુથાર",
+    "gu_name": "Carpenter",
     "providers": [
       {
         "name": "Soylo Interior",
@@ -434,10 +399,10 @@ const categoriesData = [
     ]
   },
   {
-    "id": "caterers",
-    "name": "Caterers",
-    "icon": "🍱",
-    "gu_name": "કેટરિંગ",
+    "id": "caterars",
+    "name": "Caterars",
+    "icon": "📋",
+    "gu_name": "Caterars",
     "providers": [
       {
         "name": "Ma Ashapura Restaurant",
@@ -447,7 +412,15 @@ const categoriesData = [
           "Caterars"
         ],
         "webpage": ""
-      },
+      }
+    ]
+  },
+  {
+    "id": "caterers",
+    "name": "Caterers",
+    "icon": "📋",
+    "gu_name": "Caterers",
+    "providers": [
       {
         "name": "",
         "phone": "123",
@@ -462,8 +435,8 @@ const categoriesData = [
   {
     "id": "civil-contractor",
     "name": "Civil Contractor",
-    "icon": "👷",
-    "gu_name": "સિવિલ કોન્ટ્રાક્ટર",
+    "icon": "📋",
+    "gu_name": "Civil Contractor",
     "providers": [
       {
         "name": "",
@@ -479,8 +452,8 @@ const categoriesData = [
   {
     "id": "cloths-merchant",
     "name": "Cloths Merchant",
-    "icon": "👔",
-    "gu_name": "કપડાની દુકાન",
+    "icon": "📋",
+    "gu_name": "Cloths Merchant",
     "providers": [
       {
         "name": "Vijaykumar A. Thacker",
@@ -501,7 +474,7 @@ const categoriesData = [
         "webpage": ""
       },
       {
-        "name": "Rivaan’s Fashion Hub / Rupal S Thacker",
+        "name": "Rivaans Fashion Hub / Rupal S Thacker",
         "phone": "9374205551",
         "area": "Bhuj",
         "tags": [
@@ -559,8 +532,8 @@ const categoriesData = [
   {
     "id": "coaching-classes",
     "name": "Coaching classes",
-    "icon": "📖",
-    "gu_name": "કોચિંગ ક્લાસ",
+    "icon": "📋",
+    "gu_name": "Coaching classes",
     "providers": [
       {
         "name": "BIJLANI CLASSES , std 1 to 10 ( all subjects) , 11,12 science ( CHEMISTRY)",
@@ -576,8 +549,8 @@ const categoriesData = [
   {
     "id": "cold-storage",
     "name": "Cold Storage",
-    "icon": "❄️",
-    "gu_name": "કોલ્ડ સ્ટોરેજ",
+    "icon": "📋",
+    "gu_name": "Cold Storage",
     "providers": [
       {
         "name": "",
@@ -591,10 +564,10 @@ const categoriesData = [
     ]
   },
   {
-    "id": "computer-laptop-sales",
-    "name": "Computer Laptop Sales",
+    "id": "computer-laptop-repairs",
+    "name": "Computer Laptop repairs",
     "icon": "📋",
-    "gu_name": "કમ્પ્યુટર લેપટોપ વેચાણ",
+    "gu_name": "Computer Laptop repairs",
     "providers": [
       {
         "name": "Pioneer Computer Services",
@@ -603,7 +576,7 @@ const categoriesData = [
         "tags": [
           "Computer Laptop repairs"
         ],
-        "webpage": "pioneer.html"
+        "webpage": ""
       },
       {
         "name": "Raj informatics",
@@ -619,8 +592,8 @@ const categoriesData = [
   {
     "id": "computer-repair",
     "name": "Computer Repair",
-    "icon": "💻",
-    "gu_name": "કમ્પ્યુટર રિપેર",
+    "icon": "📋",
+    "gu_name": "Computer Repair",
     "providers": [
       {
         "name": "Pioneer Computer Services",
@@ -629,15 +602,15 @@ const categoriesData = [
         "tags": [
           "Since 1993"
         ],
-        "webpage": "pioneer.html"
+        "webpage": ""
       }
     ]
   },
   {
     "id": "construction-material",
     "name": "Construction Material",
-    "icon": "🏗️",
-    "gu_name": "બાંધકામ સામગ્રી",
+    "icon": "📋",
+    "gu_name": "Construction Material",
     "providers": [
       {
         "name": "",
@@ -653,8 +626,8 @@ const categoriesData = [
   {
     "id": "courier-services",
     "name": "Courier Services",
-    "icon": "📦",
-    "gu_name": "કુરિયર સેવા",
+    "icon": "📋",
+    "gu_name": "Courier Services",
     "providers": [
       {
         "name": "",
@@ -668,27 +641,10 @@ const categoriesData = [
     ]
   },
   {
-    "id": "dastavej-/-document-writers",
-    "name": "Dastavej / Document writers",
-    "icon": "📝",
-    "gu_name": "દસ્તાવેજ લેખક",
-    "providers": [
-      {
-        "name": "Sample Writer",
-        "phone": "9999999999",
-        "area": "Bhuj",
-        "tags": [
-          "Documents"
-        ],
-        "webpage": ""
-      }
-    ]
-  },
-  {
     "id": "decoration-services",
     "name": "Decoration Services",
-    "icon": "🎈",
-    "gu_name": "ડેકોરેશન સેવા",
+    "icon": "📋",
+    "gu_name": "Decoration Services",
     "providers": [
       {
         "name": "",
@@ -704,8 +660,8 @@ const categoriesData = [
   {
     "id": "decorators",
     "name": "Decorators",
-    "icon": "🎈",
-    "gu_name": "ડેકોરેટર",
+    "icon": "📋",
+    "gu_name": "Decorators",
     "providers": [
       {
         "name": "Meetraj Event",
@@ -730,8 +686,8 @@ const categoriesData = [
   {
     "id": "dietician",
     "name": "Dietician",
-    "icon": "🥗",
-    "gu_name": "આહાર નિષ્ણાત",
+    "icon": "📋",
+    "gu_name": "Dietician",
     "providers": [
       {
         "name": "Hiral Jayy Chhelavada",
@@ -756,8 +712,8 @@ const categoriesData = [
   {
     "id": "digital-marketing",
     "name": "Digital Marketing",
-    "icon": "📱",
-    "gu_name": "ડિજિટલ માર્કેટિંગ",
+    "icon": "📋",
+    "gu_name": "Digital Marketing",
     "providers": [
       {
         "name": "",
@@ -773,8 +729,8 @@ const categoriesData = [
   {
     "id": "disaster-repair",
     "name": "Disaster Repair",
-    "icon": "🚨",
-    "gu_name": "ડિઝાસ્ટર રિપેર",
+    "icon": "📋",
+    "gu_name": "Disaster Repair",
     "providers": [
       {
         "name": "",
@@ -790,8 +746,8 @@ const categoriesData = [
   {
     "id": "electrical-stores",
     "name": "Electrical Stores",
-    "icon": "💡",
-    "gu_name": "ઇલેક્ટ્રિકલ સ્ટોર",
+    "icon": "📋",
+    "gu_name": "Electrical Stores",
     "providers": [
       {
         "name": "",
@@ -808,7 +764,7 @@ const categoriesData = [
     "id": "electrician",
     "name": "Electrician",
     "icon": "⚡",
-    "gu_name": "ઇલેક્ટ્રીશિયન",
+    "gu_name": "Electrician",
     "providers": [
       {
         "name": "Mayur Electricians",
@@ -903,10 +859,44 @@ const categoriesData = [
     ]
   },
   {
+    "id": "emergency-electrician",
+    "name": "Emergency Electrician",
+    "icon": "📋",
+    "gu_name": "Emergency Electrician",
+    "providers": [
+      {
+        "name": "",
+        "phone": "123",
+        "area": "Bhuj",
+        "tags": [
+          "Test"
+        ],
+        "webpage": ""
+      }
+    ]
+  },
+  {
+    "id": "emergency-plumber",
+    "name": "Emergency Plumber",
+    "icon": "📋",
+    "gu_name": "Emergency Plumber",
+    "providers": [
+      {
+        "name": "",
+        "phone": "123",
+        "area": "Bhuj",
+        "tags": [
+          "Test"
+        ],
+        "webpage": ""
+      }
+    ]
+  },
+  {
     "id": "estate-agent",
     "name": "Estate Agent",
-    "icon": "🏢",
-    "gu_name": "એસ્ટેટ એજન્ટ",
+    "icon": "📋",
+    "gu_name": "Estate Agent",
     "providers": [
       {
         "name": "Zameer suresh Bhai kotak",
@@ -958,8 +948,8 @@ const categoriesData = [
   {
     "id": "event-planners",
     "name": "Event Planners",
-    "icon": "🎉",
-    "gu_name": "ઇવેન્ટ પ્લાનર",
+    "icon": "📋",
+    "gu_name": "Event Planners",
     "providers": [
       {
         "name": "",
@@ -975,8 +965,8 @@ const categoriesData = [
   {
     "id": "fashion-designer",
     "name": "Fashion Designer",
-    "icon": "👗",
-    "gu_name": "ફેશન ડિઝાઇનર",
+    "icon": "📋",
+    "gu_name": "Fashion Designer",
     "providers": [
       {
         "name": "Nitin K . Modh",
@@ -999,10 +989,10 @@ const categoriesData = [
     ]
   },
   {
-    "id": "financial-advisor",
-    "name": "Financial Advisor",
-    "icon": "💰",
-    "gu_name": "નાણાકીય સલાહકાર",
+    "id": "financial-advisors",
+    "name": "Financial Advisors",
+    "icon": "📋",
+    "gu_name": "Financial Advisors",
     "providers": [
       {
         "name": "Abhay Joshi",
@@ -1021,7 +1011,15 @@ const categoriesData = [
           "Accounting|Tax"
         ],
         "webpage": ""
-      },
+      }
+    ]
+  },
+  {
+    "id": "financial-advisor",
+    "name": "Financial advisor",
+    "icon": "📋",
+    "gu_name": "Financial advisor",
+    "providers": [
       {
         "name": "OM ENTERPRISE ( AMIT DALAL)",
         "phone": "9925551966",
@@ -1090,8 +1088,8 @@ const categoriesData = [
   {
     "id": "fire-services",
     "name": "Fire Services",
-    "icon": "🚒",
-    "gu_name": "ફાયર સર્વિસ",
+    "icon": "📋",
+    "gu_name": "Fire Services",
     "providers": [
       {
         "name": "",
@@ -1107,8 +1105,8 @@ const categoriesData = [
   {
     "id": "flower-shops",
     "name": "Flower Shops",
-    "icon": "💐",
-    "gu_name": "ફૂલની દુકાન",
+    "icon": "📋",
+    "gu_name": "Flower Shops",
     "providers": [
       {
         "name": "",
@@ -1124,8 +1122,8 @@ const categoriesData = [
   {
     "id": "gst/accounting-services",
     "name": "GST/Accounting Services",
-    "icon": "💼",
-    "gu_name": "જીએસટી/એકાઉન્ટિંગ",
+    "icon": "📋",
+    "gu_name": "GST/Accounting Services",
     "providers": [
       {
         "name": "",
@@ -1141,8 +1139,8 @@ const categoriesData = [
   {
     "id": "graphic-designers",
     "name": "Graphic Designers",
-    "icon": "🎨",
-    "gu_name": "ગ્રાફિક ડિઝાઇનર",
+    "icon": "📋",
+    "gu_name": "Graphic Designers",
     "providers": [
       {
         "name": "",
@@ -1151,38 +1149,6 @@ const categoriesData = [
         "tags": [
           "Test"
         ],
-        "webpage": ""
-      }
-    ]
-  },
-  {
-    "id": "gujarati-typist",
-    "name": "Gujarati Typist",
-    "icon": "⌨️",
-    "gu_name": "ગુજરાતી ટાઇપિસ્ટ",
-    "providers": [
-      {
-        "name": "Sample Typist",
-        "phone": "9999999999",
-        "area": "Bhuj",
-        "tags": [
-          "Typing"
-        ],
-        "webpage": ""
-      }
-    ]
-  },
-  {
-    "id": "hair-stylist-(-m-/-f-)",
-    "name": "Hair Stylist ( M / F )",
-    "icon": "📋",
-    "gu_name": "Hair Stylist ( M / F )",
-    "providers": [
-      {
-        "name": "Sample Trader",
-        "phone": "9999999999",
-        "area": "Bhuj",
-        "tags": [],
         "webpage": ""
       }
     ]
@@ -1190,8 +1156,8 @@ const categoriesData = [
   {
     "id": "hardware-stores",
     "name": "Hardware Stores",
-    "icon": "🔨",
-    "gu_name": "હાર્ડવેર સ્ટોર",
+    "icon": "📋",
+    "gu_name": "Hardware Stores",
     "providers": [
       {
         "name": "",
@@ -1205,25 +1171,10 @@ const categoriesData = [
     ]
   },
   {
-    "id": "homeopathy-doctors",
-    "name": "Homeopathy Doctors",
-    "icon": "📋",
-    "gu_name": "Homeopathy Doctors",
-    "providers": [
-      {
-        "name": "Sample Trader",
-        "phone": "9999999999",
-        "area": "Bhuj",
-        "tags": [],
-        "webpage": ""
-      }
-    ]
-  },
-  {
     "id": "homestay",
     "name": "Homestay",
-    "icon": "🏡",
-    "gu_name": "હોમસ્ટે",
+    "icon": "📋",
+    "gu_name": "Homestay",
     "providers": [
       {
         "name": "Parsukshetra home stay ( Shilpa Udayan Gor )",
@@ -1239,8 +1190,8 @@ const categoriesData = [
   {
     "id": "homestays",
     "name": "Homestays",
-    "icon": "🏡",
-    "gu_name": "હોમસ્ટે",
+    "icon": "📋",
+    "gu_name": "Homestays",
     "providers": [
       {
         "name": "Raahghar Homestays",
@@ -1265,8 +1216,8 @@ const categoriesData = [
   {
     "id": "hospitals",
     "name": "Hospitals",
-    "icon": "🏥",
-    "gu_name": "હોસ્પિટલ",
+    "icon": "📋",
+    "gu_name": "Hospitals",
     "providers": [
       {
         "name": "MMPJ Hospital",
@@ -1318,8 +1269,8 @@ const categoriesData = [
   {
     "id": "hotels",
     "name": "Hotels",
-    "icon": "🏨",
-    "gu_name": "હોટેલ",
+    "icon": "📋",
+    "gu_name": "Hotels",
     "providers": [
       {
         "name": "Hotel Nest",
@@ -1351,17 +1302,34 @@ const categoriesData = [
     ]
   },
   {
-    "id": "importers-/-exporters",
-    "name": "Importers / Exporters",
-    "icon": "🌍",
-    "gu_name": "આયાત/નિકાસ",
+    "id": "house/shop-rentals",
+    "name": "House/Shop Rentals",
+    "icon": "📋",
+    "gu_name": "House/Shop Rentals",
     "providers": [
       {
-        "name": "Sample Trader",
-        "phone": "9999999999",
+        "name": "",
+        "phone": "123",
         "area": "Bhuj",
         "tags": [
-          "Import|Export"
+          "Test"
+        ],
+        "webpage": ""
+      }
+    ]
+  },
+  {
+    "id": "ice-delivery",
+    "name": "Ice Delivery",
+    "icon": "📋",
+    "gu_name": "Ice Delivery",
+    "providers": [
+      {
+        "name": "",
+        "phone": "123",
+        "area": "Bhuj",
+        "tags": [
+          "Test"
         ],
         "webpage": ""
       }
@@ -1370,8 +1338,8 @@ const categoriesData = [
   {
     "id": "insurance-agent",
     "name": "Insurance Agent",
-    "icon": "🛡️",
-    "gu_name": "વીમા એજન્ટ",
+    "icon": "📋",
+    "gu_name": "Insurance Agent",
     "providers": [
       {
         "name": "D HITESH SONI",
@@ -1417,23 +1385,14 @@ const categoriesData = [
           "Insurance Agent"
         ],
         "webpage": ""
-      },
-      {
-        "name": "Hiral Thacker",
-        "phone": "9879359789",
-        "area": "Bhuj",
-        "tags": [
-          "Insurance Manager"
-        ],
-        "webpage": ""
       }
     ]
   },
   {
-    "id": "insurance-companies",
-    "name": "Insurance Companies",
+    "id": "insurance-agents",
+    "name": "Insurance Agents",
     "icon": "📋",
-    "gu_name": "Insurance Companies",
+    "gu_name": "Insurance Agents",
     "providers": [
       {
         "name": "LIC of India",
@@ -1461,14 +1420,23 @@ const categoriesData = [
           "Life|Health"
         ],
         "webpage": ""
+      },
+      {
+        "name": "Hiral Thacker",
+        "phone": "9879359789",
+        "area": "Bhuj",
+        "tags": [
+          "Insurance Manager"
+        ],
+        "webpage": ""
       }
     ]
   },
   {
     "id": "interior-designer",
     "name": "Interior Designer",
-    "icon": "🏠",
-    "gu_name": "ઇન્ટીરિયર ડિઝાઇનર",
+    "icon": "📋",
+    "gu_name": "Interior Designer",
     "providers": [
       {
         "name": "",
@@ -1484,8 +1452,8 @@ const categoriesData = [
   {
     "id": "inverter/battery-dealers",
     "name": "Inverter/Battery Dealers",
-    "icon": "🔋",
-    "gu_name": "ઇન્વર્ટર/બેટરી",
+    "icon": "📋",
+    "gu_name": "Inverter/Battery Dealers",
     "providers": [
       {
         "name": "",
@@ -1501,7 +1469,7 @@ const categoriesData = [
   {
     "id": "jeweller",
     "name": "Jeweller",
-    "icon": "💎",
+    "icon": "📋",
     "gu_name": "Jeweller",
     "providers": [
       {
@@ -1516,10 +1484,27 @@ const categoriesData = [
     ]
   },
   {
+    "id": "jewellers",
+    "name": "Jewellers",
+    "icon": "📋",
+    "gu_name": "Jewellers",
+    "providers": [
+      {
+        "name": "",
+        "phone": "123",
+        "area": "Bhuj",
+        "tags": [
+          "Test"
+        ],
+        "webpage": ""
+      }
+    ]
+  },
+  {
     "id": "kirana-stores",
     "name": "Kirana Stores",
-    "icon": "🛒",
-    "gu_name": "કિરાણાની દુકાન",
+    "icon": "📋",
+    "gu_name": "Kirana Stores",
     "providers": [
       {
         "name": "Swagat Grocery",
@@ -1562,8 +1547,8 @@ const categoriesData = [
   {
     "id": "laboratories",
     "name": "Laboratories",
-    "icon": "🔬",
-    "gu_name": "લેબોરેટરી",
+    "icon": "📋",
+    "gu_name": "Laboratories",
     "providers": [
       {
         "name": "Metropolis Healthcare",
@@ -1597,8 +1582,8 @@ const categoriesData = [
   {
     "id": "laundry-/-dhobi",
     "name": "Laundry / Dhobi",
-    "icon": "👕",
-    "gu_name": "ધોબી",
+    "icon": "📋",
+    "gu_name": "Laundry / Dhobi",
     "providers": [
       {
         "name": "Shahil",
@@ -1614,8 +1599,8 @@ const categoriesData = [
   {
     "id": "legal-services/-lawyer",
     "name": "Legal Services/ Lawyer",
-    "icon": "⚖️",
-    "gu_name": "વકીલ",
+    "icon": "📋",
+    "gu_name": "Legal Services/ Lawyer",
     "providers": [
       {
         "name": "Gor Shilpa Jayantilal",
@@ -1649,8 +1634,8 @@ const categoriesData = [
   {
     "id": "masons",
     "name": "Masons",
-    "icon": "🧱",
-    "gu_name": "રાજ",
+    "icon": "📋",
+    "gu_name": "Masons",
     "providers": [
       {
         "name": "Sai Construction",
@@ -1703,7 +1688,7 @@ const categoriesData = [
     "id": "medical",
     "name": "Medical",
     "icon": "🏥",
-    "gu_name": "મેડિકલ",
+    "gu_name": "Medical",
     "providers": [
       {
         "name": "Jalaram Medico",
@@ -1728,8 +1713,8 @@ const categoriesData = [
   {
     "id": "medical-store",
     "name": "Medical store",
-    "icon": "💊",
-    "gu_name": "દવાની દુકાન",
+    "icon": "📋",
+    "gu_name": "Medical store",
     "providers": [
       {
         "name": "Shree krishna pharma",
@@ -1754,8 +1739,8 @@ const categoriesData = [
   {
     "id": "milk-delivery",
     "name": "Milk Delivery",
-    "icon": "🥛",
-    "gu_name": "દૂધ ડિલિવરી",
+    "icon": "📋",
+    "gu_name": "Milk Delivery",
     "providers": [
       {
         "name": "",
@@ -1771,8 +1756,8 @@ const categoriesData = [
   {
     "id": "modular-kitchen",
     "name": "Modular Kitchen",
-    "icon": "🍴",
-    "gu_name": "મોડ્યુલર કિચન",
+    "icon": "📋",
+    "gu_name": "Modular Kitchen",
     "providers": [
       {
         "name": "",
@@ -1788,8 +1773,8 @@ const categoriesData = [
   {
     "id": "mutual-fund-advisors",
     "name": "Mutual Fund Advisors",
-    "icon": "💰",
-    "gu_name": "મ્યુચ્યુઅલ ફંડ સલાહકાર",
+    "icon": "📋",
+    "gu_name": "Mutual Fund Advisors",
     "providers": [
       {
         "name": "Kiran Patel",
@@ -1823,8 +1808,8 @@ const categoriesData = [
   {
     "id": "notary",
     "name": "Notary",
-    "icon": "📜",
-    "gu_name": "નોટરી",
+    "icon": "📋",
+    "gu_name": "Notary",
     "providers": [
       {
         "name": "Gor Shilpa Jayantilal",
@@ -1856,10 +1841,27 @@ const categoriesData = [
     ]
   },
   {
+    "id": "notary/legal-services",
+    "name": "Notary/Legal Services",
+    "icon": "📋",
+    "gu_name": "Notary/Legal Services",
+    "providers": [
+      {
+        "name": "",
+        "phone": "123",
+        "area": "Bhuj",
+        "tags": [
+          "Test"
+        ],
+        "webpage": ""
+      }
+    ]
+  },
+  {
     "id": "nurses",
     "name": "Nurses",
-    "icon": "👩‍⚕️",
-    "gu_name": "નર્સ",
+    "icon": "📋",
+    "gu_name": "Nurses",
     "providers": [
       {
         "name": "Shubh Aarogyam",
@@ -1893,8 +1895,8 @@ const categoriesData = [
   {
     "id": "nutritionists/dieticians",
     "name": "Nutritionists/Dieticians",
-    "icon": "🥗",
-    "gu_name": "પોષણ નિષ્ણાત",
+    "icon": "📋",
+    "gu_name": "Nutritionists/Dieticians",
     "providers": [
       {
         "name": "",
@@ -1908,27 +1910,10 @@ const categoriesData = [
     ]
   },
   {
-    "id": "opticians",
-    "name": "Opticians",
-    "icon": "👓",
-    "gu_name": "ચશ્મા",
-    "providers": [
-      {
-        "name": "Sample Optician",
-        "phone": "9999999999",
-        "area": "Bhuj",
-        "tags": [
-          "Eyewear"
-        ],
-        "webpage": ""
-      }
-    ]
-  },
-  {
     "id": "pg/hostels",
     "name": "PG/Hostels",
-    "icon": "🏠",
-    "gu_name": "પીજી/હોસ્ટેલ",
+    "icon": "📋",
+    "gu_name": "PG/Hostels",
     "providers": [
       {
         "name": "",
@@ -1944,8 +1929,8 @@ const categoriesData = [
   {
     "id": "pop/false-ceiling",
     "name": "POP/False Ceiling",
-    "icon": "🏠",
-    "gu_name": "ફોલ્સ સીલિંગ",
+    "icon": "📋",
+    "gu_name": "POP/False Ceiling",
     "providers": [
       {
         "name": "",
@@ -1961,8 +1946,8 @@ const categoriesData = [
   {
     "id": "packers-&-movers",
     "name": "Packers & Movers",
-    "icon": "📦",
-    "gu_name": "પેકર્સ અને મૂવર્સ",
+    "icon": "📋",
+    "gu_name": "Packers & Movers",
     "providers": [
       {
         "name": "",
@@ -1978,8 +1963,8 @@ const categoriesData = [
   {
     "id": "pest-control",
     "name": "Pest Control",
-    "icon": "🐛",
-    "gu_name": "પેસ્ટ કંટ્રોલ",
+    "icon": "📋",
+    "gu_name": "Pest Control",
     "providers": [
       {
         "name": "Deccan Pest Control",
@@ -2013,8 +1998,8 @@ const categoriesData = [
   {
     "id": "photographer/videographer",
     "name": "Photographer/Videographer",
-    "icon": "📸",
-    "gu_name": "ફોટોગ્રાફર",
+    "icon": "📋",
+    "gu_name": "Photographer/Videographer",
     "providers": [
       {
         "name": "",
@@ -2030,8 +2015,8 @@ const categoriesData = [
   {
     "id": "photographers-/-videographers",
     "name": "Photographers / Videographers",
-    "icon": "📸",
-    "gu_name": "ફોટોગ્રાફર",
+    "icon": "📋",
+    "gu_name": "Photographers / Videographers",
     "providers": [
       {
         "name": "Mohan Matang Photography",
@@ -2047,8 +2032,8 @@ const categoriesData = [
   {
     "id": "physiotherapists",
     "name": "Physiotherapists",
-    "icon": "💪",
-    "gu_name": "ફિઝિયોથેરાપિસ્ટ",
+    "icon": "📋",
+    "gu_name": "Physiotherapists",
     "providers": [
       {
         "name": "",
@@ -2065,7 +2050,7 @@ const categoriesData = [
     "id": "plumber",
     "name": "Plumber",
     "icon": "🔧",
-    "gu_name": "પ્લમ્બર",
+    "gu_name": "Plumber",
     "providers": [
       {
         "name": "Krishna Plumbing Service",
@@ -2144,8 +2129,8 @@ const categoriesData = [
   {
     "id": "printing-&-flex-banner",
     "name": "Printing & Flex Banner",
-    "icon": "🖨️",
-    "gu_name": "પ્રિન્ટિંગ અને બેનર",
+    "icon": "📋",
+    "gu_name": "Printing & Flex Banner",
     "providers": [
       {
         "name": "",
@@ -2161,8 +2146,8 @@ const categoriesData = [
   {
     "id": "ro-water-purifier",
     "name": "RO water purifier",
-    "icon": "💧",
-    "gu_name": "આરઓ વોટર પ્યુરિફાયર",
+    "icon": "📋",
+    "gu_name": "RO water purifier",
     "providers": [
       {
         "name": "Lanai Electronics & Refrigeration",
@@ -2178,8 +2163,8 @@ const categoriesData = [
   {
     "id": "real-estate-agents",
     "name": "Real Estate Agents",
-    "icon": "🏢",
-    "gu_name": "રીઅલ એસ્ટેટ એજન્ટ",
+    "icon": "📋",
+    "gu_name": "Real Estate Agents",
     "providers": [
       {
         "name": "",
@@ -2195,8 +2180,8 @@ const categoriesData = [
   {
     "id": "restaurants",
     "name": "Restaurants",
-    "icon": "🍽️",
-    "gu_name": "રેસ્ટોરન્ટ",
+    "icon": "📋",
+    "gu_name": "Restaurants",
     "providers": [
       {
         "name": "Umiyaji Dining Hall",
@@ -2239,8 +2224,8 @@ const categoriesData = [
   {
     "id": "schools",
     "name": "Schools",
-    "icon": "🏫",
-    "gu_name": "શાળા",
+    "icon": "📋",
+    "gu_name": "Schools",
     "providers": [
       {
         "name": "Army Public School",
@@ -2292,8 +2277,8 @@ const categoriesData = [
   {
     "id": "share-brokers",
     "name": "Share Brokers",
-    "icon": "📈",
-    "gu_name": "શેર બ્રોકર",
+    "icon": "📋",
+    "gu_name": "Share Brokers",
     "providers": [
       {
         "name": "Sharekhan Ltd",
@@ -2327,8 +2312,8 @@ const categoriesData = [
   {
     "id": "solar-panel-installation",
     "name": "Solar Panel Installation",
-    "icon": "☀️",
-    "gu_name": "સોલર પેનલ",
+    "icon": "📋",
+    "gu_name": "Solar Panel Installation",
     "providers": [
       {
         "name": "",
@@ -2353,8 +2338,8 @@ const categoriesData = [
   {
     "id": "stationer's",
     "name": "Stationer's",
-    "icon": "✏️",
-    "gu_name": "સ્ટેશનરી",
+    "icon": "📋",
+    "gu_name": "Stationer's",
     "providers": [
       {
         "name": "Paras K.Thacker, Silver Gen .Store and Stationers",
@@ -2388,8 +2373,8 @@ const categoriesData = [
   {
     "id": "stationery",
     "name": "Stationery",
-    "icon": "✏️",
-    "gu_name": "સ્ટેશનરી",
+    "icon": "📋",
+    "gu_name": "Stationery",
     "providers": [
       {
         "name": "",
@@ -2405,8 +2390,8 @@ const categoriesData = [
   {
     "id": "stock-market-servicee",
     "name": "Stock Market Servicee",
-    "icon": "📈",
-    "gu_name": "સ્ટોક માર્કેટ સેવા",
+    "icon": "📋",
+    "gu_name": "Stock Market Servicee",
     "providers": [
       {
         "name": "Dipen gor",
@@ -2420,10 +2405,27 @@ const categoriesData = [
     ]
   },
   {
+    "id": "sweet-shops/mithai",
+    "name": "Sweet Shops/Mithai",
+    "icon": "📋",
+    "gu_name": "Sweet Shops/Mithai",
+    "providers": [
+      {
+        "name": "",
+        "phone": "123",
+        "area": "Bhuj",
+        "tags": [
+          "Test"
+        ],
+        "webpage": ""
+      }
+    ]
+  },
+  {
     "id": "sweet-shop-/-mithai",
     "name": "Sweet shop / Mithai",
-    "icon": "🍬",
-    "gu_name": "મીઠાઈની દુકાન",
+    "icon": "📋",
+    "gu_name": "Sweet shop / Mithai",
     "providers": [
       {
         "name": "Madhuram mukhwas.",
@@ -2439,8 +2441,8 @@ const categoriesData = [
   {
     "id": "tailor",
     "name": "Tailor",
-    "icon": "✂️",
-    "gu_name": "દરજી",
+    "icon": "📋",
+    "gu_name": "Tailor",
     "providers": [
       {
         "name": "Pooja hardik soni",
@@ -2456,8 +2458,8 @@ const categoriesData = [
   {
     "id": "tank-cleaning",
     "name": "Tank Cleaning",
-    "icon": "💧",
-    "gu_name": "ટાંકી સફાઈ",
+    "icon": "📋",
+    "gu_name": "Tank Cleaning",
     "providers": [
       {
         "name": "Mannubhai Cleaning",
@@ -2509,8 +2511,8 @@ const categoriesData = [
   {
     "id": "teachers",
     "name": "Teachers",
-    "icon": "👨‍🏫",
-    "gu_name": "શિક્ષક",
+    "icon": "📋",
+    "gu_name": "Teachers",
     "providers": [
       {
         "name": "Nirali mahichchha",
@@ -2544,8 +2546,8 @@ const categoriesData = [
   {
     "id": "tent-&-sound-system",
     "name": "Tent & Sound System",
-    "icon": "🎪",
-    "gu_name": "ટેન્ટ અને સાઉન્ડ",
+    "icon": "📋",
+    "gu_name": "Tent & Sound System",
     "providers": [
       {
         "name": "",
@@ -2561,8 +2563,8 @@ const categoriesData = [
   {
     "id": "tiles-fitter",
     "name": "Tiles Fitter",
-    "icon": "🏗️",
-    "gu_name": "ટાઇલ્સ ફિટર",
+    "icon": "📋",
+    "gu_name": "Tiles Fitter",
     "providers": [
       {
         "name": "Ravendra",
@@ -2630,27 +2632,10 @@ const categoriesData = [
     ]
   },
   {
-    "id": "tours-&-travels",
-    "name": "Tours & Travels",
-    "icon": "✈️",
-    "gu_name": "ટુર્સ અને ટ્રાવેલ્સ",
-    "providers": [
-      {
-        "name": "Sample Tours",
-        "phone": "9999999999",
-        "area": "Bhuj",
-        "tags": [
-          "Tours"
-        ],
-        "webpage": ""
-      }
-    ]
-  },
-  {
     "id": "transport/tempo-services",
     "name": "Transport/Tempo Services",
-    "icon": "🚛",
-    "gu_name": "ટ્રાન્સપોર્ટ સેવા",
+    "icon": "📋",
+    "gu_name": "Transport/Tempo Services",
     "providers": [
       {
         "name": "",
@@ -2666,8 +2651,8 @@ const categoriesData = [
   {
     "id": "tuition-classes",
     "name": "Tuition Classes",
-    "icon": "📖",
-    "gu_name": "ટ્યુશન ક્લાસ",
+    "icon": "📋",
+    "gu_name": "Tuition Classes",
     "providers": [
       {
         "name": "Phoenix Education",
@@ -2701,8 +2686,8 @@ const categoriesData = [
   {
     "id": "tyre/puncture-shop",
     "name": "Tyre/Puncture Shop",
-    "icon": "🚗",
-    "gu_name": "ટાયર/પંચર",
+    "icon": "📋",
+    "gu_name": "Tyre/Puncture Shop",
     "providers": [
       {
         "name": "",
@@ -2718,8 +2703,8 @@ const categoriesData = [
   {
     "id": "vetenary-services-/-pet-services",
     "name": "Vetenary Services / Pet Services",
-    "icon": "🐾",
-    "gu_name": "વેટરનરી સેવા",
+    "icon": "📋",
+    "gu_name": "Vetenary Services / Pet Services",
     "providers": [
       {
         "name": "Malhar Dave",
@@ -2735,8 +2720,8 @@ const categoriesData = [
   {
     "id": "veterinary/animal-care",
     "name": "Veterinary/Animal Care",
-    "icon": "🐾",
-    "gu_name": "પશુ ચિકિત્સા",
+    "icon": "📋",
+    "gu_name": "Veterinary/Animal Care",
     "providers": [
       {
         "name": "",
@@ -2752,8 +2737,8 @@ const categoriesData = [
   {
     "id": "water-purifier-service",
     "name": "Water Purifier Service",
-    "icon": "💧",
-    "gu_name": "વોટર પ્યુરિફાયર",
+    "icon": "📋",
+    "gu_name": "Water Purifier Service",
     "providers": [
       {
         "name": "",
@@ -2769,8 +2754,8 @@ const categoriesData = [
   {
     "id": "water-tanker-services",
     "name": "Water Tanker Services",
-    "icon": "💧",
-    "gu_name": "પાણીની ટાંકી સેવા",
+    "icon": "📋",
+    "gu_name": "Water Tanker Services",
     "providers": [
       {
         "name": "Shiv Tanker Services",
@@ -2786,25 +2771,52 @@ const categoriesData = [
   {
     "id": "website-designers",
     "name": "Website Designers",
-    "icon": "🌐",
-    "gu_name": "વેબસાઇટ ડિઝાઇનર",
+    "icon": "📋",
+    "gu_name": "Website Designers",
     "providers": [
+      {
+        "name": "Infinitie Technologies",
+        "phone": "9879511222",
+        "area": "Station Road",
+        "tags": [
+          "Web|App"
+        ],
+        "webpage": ""
+      },
+      {
+        "name": "WRTeam",
+        "phone": "9797945459",
+        "area": "Time Square Empire",
+        "tags": [
+          "Software|App"
+        ],
+        "webpage": ""
+      },
+      {
+        "name": "Bigimmense IT",
+        "phone": "7417890719",
+        "area": "Bhuj HO",
+        "tags": [
+          "SEO|Web"
+        ],
+        "webpage": ""
+      },
       {
         "name": "Hari Tech Solutions",
         "phone": "9512234395",
         "area": "Bhuj",
         "tags": [
-          "haritech.html"
+          "Website Designers"
         ],
-        "webpage": "haritech.html"
+        "webpage": ""
       }
     ]
   },
   {
     "id": "yoga-fitness-trainers",
     "name": "Yoga fitness trainers",
-    "icon": "🧘",
-    "gu_name": "યોગ/ફિટનેસ ટ્રેનર",
+    "icon": "📋",
+    "gu_name": "Yoga fitness trainers",
     "providers": [
       {
         "name": "Yog coach Reena Kalpesh gor(Aditi yoga classes)",
@@ -2812,6 +2824,23 @@ const categoriesData = [
         "area": "Bhuj",
         "tags": [
           "Yoga fitness trainers"
+        ],
+        "webpage": ""
+      }
+    ]
+  },
+  {
+    "id": "yoga/fitness-trainers",
+    "name": "Yoga/Fitness Trainers",
+    "icon": "📋",
+    "gu_name": "Yoga/Fitness Trainers",
+    "providers": [
+      {
+        "name": "",
+        "phone": "123",
+        "area": "Bhuj",
+        "tags": [
+          "Test"
         ],
         "webpage": ""
       }

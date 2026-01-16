@@ -32,6 +32,7 @@ for row in data_rows:
         phone = row['Phone'].strip()
         area = row['Area'].strip()
         tags = row['Tags'].strip() if row['Tags'] else ''
+        webpage = row.get('Webpage', '').strip() if row.get('Webpage') else ''
         
         # Create unique key for deduplication (category + name + phone)
         unique_key = f"{category}|{name}|{phone}"
@@ -52,7 +53,7 @@ for row in data_rows:
             'phone': phone,
             'area': area,
             'tags': tags_list,
-            'webpage': ''  # Empty webpage field
+            'webpage': webpage
         }
         
         categories_data[category]['providers'].append(provider)

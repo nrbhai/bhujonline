@@ -5,7 +5,7 @@ const categoriesData = [
   {
     "id": "ac/fridge-repair",
     "name": "AC/Fridge Repair",
-    "icon": "❄️",
+    "icon": "📋",
     "gu_name": "AC/Fridge Repair",
     "providers": [
       {
@@ -641,23 +641,6 @@ const categoriesData = [
     ]
   },
   {
-    "id": "dastavej-/-document-writers",
-    "name": "Dastavej / Document writers",
-    "icon": "📝",
-    "gu_name": "Dastavej / Document writers",
-    "providers": [
-      {
-        "name": "Sample Writer",
-        "phone": "9999999999",
-        "area": "Bhuj",
-        "tags": [
-          "Documents"
-        ],
-        "webpage": ""
-      }
-    ]
-  },
-  {
     "id": "decoration-services",
     "name": "Decoration Services",
     "icon": "📋",
@@ -876,9 +859,43 @@ const categoriesData = [
     ]
   },
   {
+    "id": "emergency-electrician",
+    "name": "Emergency Electrician",
+    "icon": "📋",
+    "gu_name": "Emergency Electrician",
+    "providers": [
+      {
+        "name": "",
+        "phone": "123",
+        "area": "Bhuj",
+        "tags": [
+          "Test"
+        ],
+        "webpage": ""
+      }
+    ]
+  },
+  {
+    "id": "emergency-plumber",
+    "name": "Emergency Plumber",
+    "icon": "📋",
+    "gu_name": "Emergency Plumber",
+    "providers": [
+      {
+        "name": "",
+        "phone": "123",
+        "area": "Bhuj",
+        "tags": [
+          "Test"
+        ],
+        "webpage": ""
+      }
+    ]
+  },
+  {
     "id": "estate-agent",
     "name": "Estate Agent",
-    "icon": "🏢",
+    "icon": "📋",
     "gu_name": "Estate Agent",
     "providers": [
       {
@@ -972,10 +989,10 @@ const categoriesData = [
     ]
   },
   {
-    "id": "financial-advisor",
-    "name": "Financial Advisor",
-    "icon": "💰",
-    "gu_name": "Financial Advisor",
+    "id": "financial-advisors",
+    "name": "Financial Advisors",
+    "icon": "📋",
+    "gu_name": "Financial Advisors",
     "providers": [
       {
         "name": "Abhay Joshi",
@@ -994,7 +1011,15 @@ const categoriesData = [
           "Accounting|Tax"
         ],
         "webpage": ""
-      },
+      }
+    ]
+  },
+  {
+    "id": "financial-advisor",
+    "name": "Financial advisor",
+    "icon": "📋",
+    "gu_name": "Financial advisor",
+    "providers": [
       {
         "name": "OM ENTERPRISE ( AMIT DALAL)",
         "phone": "9925551966",
@@ -1129,23 +1154,6 @@ const categoriesData = [
     ]
   },
   {
-    "id": "gujarati-typist",
-    "name": "Gujarati Typist",
-    "icon": "⌨️",
-    "gu_name": "Gujarati Typist",
-    "providers": [
-      {
-        "name": "Sample Typist",
-        "phone": "9999999999",
-        "area": "Bhuj",
-        "tags": [
-          "Typing"
-        ],
-        "webpage": ""
-      }
-    ]
-  },
-  {
     "id": "hardware-stores",
     "name": "Hardware Stores",
     "icon": "📋",
@@ -1208,7 +1216,7 @@ const categoriesData = [
   {
     "id": "hospitals",
     "name": "Hospitals",
-    "icon": "🏥",
+    "icon": "📋",
     "gu_name": "Hospitals",
     "providers": [
       {
@@ -1328,23 +1336,6 @@ const categoriesData = [
     ]
   },
   {
-    "id": "importers-/-exporters",
-    "name": "Importers / Exporters",
-    "icon": "🌍",
-    "gu_name": "Importers / Exporters",
-    "providers": [
-      {
-        "name": "Sample Trader",
-        "phone": "9999999999",
-        "area": "Bhuj",
-        "tags": [
-          "Import|Export"
-        ],
-        "webpage": ""
-      }
-    ]
-  },
-  {
     "id": "insurance-agent",
     "name": "Insurance Agent",
     "icon": "📋",
@@ -1444,7 +1435,7 @@ const categoriesData = [
   {
     "id": "interior-designer",
     "name": "Interior Designer",
-    "icon": "🏠",
+    "icon": "📋",
     "gu_name": "Interior Designer",
     "providers": [
       {
@@ -1478,7 +1469,7 @@ const categoriesData = [
   {
     "id": "jeweller",
     "name": "Jeweller",
-    "icon": "💎",
+    "icon": "📋",
     "gu_name": "Jeweller",
     "providers": [
       {
@@ -1919,23 +1910,6 @@ const categoriesData = [
     ]
   },
   {
-    "id": "opticians",
-    "name": "Opticians",
-    "icon": "👓",
-    "gu_name": "Opticians",
-    "providers": [
-      {
-        "name": "Sample Optician",
-        "phone": "9999999999",
-        "area": "Bhuj",
-        "tags": [
-          "Eyewear"
-        ],
-        "webpage": ""
-      }
-    ]
-  },
-  {
     "id": "pg/hostels",
     "name": "PG/Hostels",
     "icon": "📋",
@@ -1989,7 +1963,7 @@ const categoriesData = [
   {
     "id": "pest-control",
     "name": "Pest Control",
-    "icon": "🐛",
+    "icon": "📋",
     "gu_name": "Pest Control",
     "providers": [
       {
@@ -2399,7 +2373,7 @@ const categoriesData = [
   {
     "id": "stationery",
     "name": "Stationery",
-    "icon": "✏️",
+    "icon": "📋",
     "gu_name": "Stationery",
     "providers": [
       {
@@ -2652,23 +2626,6 @@ const categoriesData = [
         "area": "Bhuj",
         "tags": [
           "Tiles Fitter"
-        ],
-        "webpage": ""
-      }
-    ]
-  },
-  {
-    "id": "tours-&-travels",
-    "name": "Tours & Travels",
-    "icon": "✈️",
-    "gu_name": "Tours & Travels",
-    "providers": [
-      {
-        "name": "Sample Tours",
-        "phone": "9999999999",
-        "area": "Bhuj",
-        "tags": [
-          "Tours"
         ],
         "webpage": ""
       }

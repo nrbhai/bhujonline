@@ -1,15 +1,14 @@
 // script.js
 
-document.addEventListener('DOMContentLoaded', async () => {
-    // Initialize Data (Fetch CSV or Fallback)
-    await window.initializeData();
+document.addEventListener('DOMContentLoaded', () => {
+    // Detect which page we're on based on DOM elements, not URL
+    // This works with Cloudflare Pages' pretty URLs (/category instead of /category.html)
 
-    const path = window.location.pathname;
-    const page = path.split("/").pop();
-
-    if (page === 'index.html' || page === '') {
+    if (document.getElementById('category-list')) {
+        // Home page has category-list element
         initHomePage();
-    } else if (page === 'category.html') {
+    } else if (document.getElementById('provider-list')) {
+        // Category page has provider-list element
         initCategoryPage();
     }
 });
@@ -20,7 +19,7 @@ function initHomePage() {
     if (!listContainer) return;
 
     const allCategories = window.getAllCategories();
-    
+
     // Sort categories alphabetically
     allCategories.sort((a, b) => a.name.localeCompare(b.name));
 
@@ -52,8 +51,8 @@ function initHomePage() {
     if (searchInput) {
         searchInput.addEventListener('input', (e) => {
             const query = e.target.value.toLowerCase().trim();
-            const filtered = allCategories.filter(cat => 
-                cat.name.toLowerCase().includes(query) || 
+            const filtered = allCategories.filter(cat =>
+                cat.name.toLowerCase().includes(query) ||
                 (cat.gu_name && cat.gu_name.includes(query))
             );
             render(filtered);
@@ -74,18 +73,18 @@ function initCategoryPage() {
     }
 
     const data = window.getProviders(catId);
-    
+
     if (!data) {
         titleEl.textContent = 'Category Not Found';
         container.innerHTML = '<div class="empty-state">Category not found. <a href="index.html">Go Home</a></div>';
         return;
     }
 
-    titleEl.textContent = data.name;
-    
+    titleEl.textContent = `${data.icon} ${data.name}`;
+
     // SEO: Dynamic Title & Meta Description
     document.title = `${data.name} in Bhuj | Bhuj Online`;
-    
+
     let metaDesc = document.querySelector('meta[name="description"]');
     if (!metaDesc) {
         metaDesc = document.createElement('meta');
@@ -99,8 +98,8 @@ function initCategoryPage() {
     // Search filter
     searchInput.addEventListener('input', (e) => {
         const query = e.target.value.toLowerCase();
-        const filtered = data.providers.filter(p => 
-            p.name.toLowerCase().includes(query) || 
+        const filtered = data.providers.filter(p =>
+            p.name.toLowerCase().includes(query) ||
             p.area.toLowerCase().includes(query) ||
             p.phone.includes(query)
         );

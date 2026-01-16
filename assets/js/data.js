@@ -994,15 +994,7 @@ const categoriesData = [
           "Accounting|Tax"
         ],
         "webpage": ""
-      }
-    ]
-  },
-  {
-    "id": "financial-advisor",
-    "name": "Financial advisor",
-    "icon": "📋",
-    "gu_name": "Financial advisor",
-    "providers": [
+      },
       {
         "name": "OM ENTERPRISE ( AMIT DALAL)",
         "phone": "9925551966",

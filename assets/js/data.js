@@ -859,40 +859,6 @@ const categoriesData = [
     ]
   },
   {
-    "id": "emergency-electrician",
-    "name": "Emergency Electrician",
-    "icon": "📋",
-    "gu_name": "Emergency Electrician",
-    "providers": [
-      {
-        "name": "",
-        "phone": "123",
-        "area": "Bhuj",
-        "tags": [
-          "Test"
-        ],
-        "webpage": ""
-      }
-    ]
-  },
-  {
-    "id": "emergency-plumber",
-    "name": "Emergency Plumber",
-    "icon": "📋",
-    "gu_name": "Emergency Plumber",
-    "providers": [
-      {
-        "name": "",
-        "phone": "123",
-        "area": "Bhuj",
-        "tags": [
-          "Test"
-        ],
-        "webpage": ""
-      }
-    ]
-  },
-  {
     "id": "estate-agent",
     "name": "Estate Agent",
     "icon": "📋",
@@ -2626,6 +2592,23 @@ const categoriesData = [
         "area": "Bhuj",
         "tags": [
           "Tiles Fitter"
+        ],
+        "webpage": ""
+      }
+    ]
+  },
+  {
+    "id": "tours-&-travels",
+    "name": "Tours & Travels",
+    "icon": "📋",
+    "gu_name": "Tours & Travels",
+    "providers": [
+      {
+        "name": "Sample Tours",
+        "phone": "9999999999",
+        "area": "Bhuj",
+        "tags": [
+          "Tours"
         ],
         "webpage": ""
       }

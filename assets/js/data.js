@@ -641,6 +641,23 @@ const categoriesData = [
     ]
   },
   {
+    "id": "dastavej-/-document-writers",
+    "name": "Dastavej / Document writers",
+    "icon": "📋",
+    "gu_name": "Dastavej / Document writers",
+    "providers": [
+      {
+        "name": "Sample Writer",
+        "phone": "9999999999",
+        "area": "Bhuj",
+        "tags": [
+          "Documents"
+        ],
+        "webpage": ""
+      }
+    ]
+  },
+  {
     "id": "decoration-services",
     "name": "Decoration Services",
     "icon": "📋",
@@ -1120,6 +1137,23 @@ const categoriesData = [
     ]
   },
   {
+    "id": "gujarati-typist",
+    "name": "Gujarati Typist",
+    "icon": "📋",
+    "gu_name": "Gujarati Typist",
+    "providers": [
+      {
+        "name": "Sample Typist",
+        "phone": "9999999999",
+        "area": "Bhuj",
+        "tags": [
+          "Typing"
+        ],
+        "webpage": ""
+      }
+    ]
+  },
+  {
     "id": "hardware-stores",
     "name": "Hardware Stores",
     "icon": "📋",
@@ -1296,6 +1330,23 @@ const categoriesData = [
         "area": "Bhuj",
         "tags": [
           "Test"
+        ],
+        "webpage": ""
+      }
+    ]
+  },
+  {
+    "id": "importers-/-exporters",
+    "name": "Importers / Exporters",
+    "icon": "📋",
+    "gu_name": "Importers / Exporters",
+    "providers": [
+      {
+        "name": "Sample Trader",
+        "phone": "9999999999",
+        "area": "Bhuj",
+        "tags": [
+          "Import|Export"
         ],
         "webpage": ""
       }
@@ -1870,6 +1921,23 @@ const categoriesData = [
         "area": "Bhuj",
         "tags": [
           "Test"
+        ],
+        "webpage": ""
+      }
+    ]
+  },
+  {
+    "id": "opticians",
+    "name": "Opticians",
+    "icon": "📋",
+    "gu_name": "Opticians",
+    "providers": [
+      {
+        "name": "Sample Optician",
+        "phone": "9999999999",
+        "area": "Bhuj",
+        "tags": [
+          "Eyewear"
         ],
         "webpage": ""
       }

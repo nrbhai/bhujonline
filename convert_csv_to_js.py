@@ -273,11 +273,156 @@ for category_name in sorted(categories_data.keys()):
     
     icon = icon_map.get(category_name.lower(), '📋')
     
+    # Gujarati name mapping
+    gujarati_map = {
+        # Home Services
+        'electrician': 'ઇલેક્ટ્રીશિયન',
+        'plumber': 'પ્લમ્બર',
+        'carpenter': 'સુથાર',
+        'painter': 'પેઇન્ટર',
+        'ac/fridge repair': 'એસી/ફ્રિજ રિપેર',
+        'ac fridge repairer': 'એસી/ફ્રિજ રિપેરર',
+        'pest control': 'પેસ્ટ કંટ્રોલ',
+        'interior designer': 'ઇન્ટીરિયર ડિઝાઇનર',
+        'mason': 'રાજ',
+        'masons': 'રાજ',
+        'cleaning service': 'સફાઈ સેવા',
+        'laundry / dhobi': 'ધોબી',
+        'tank cleaning': 'ટાંકી સફાઈ',
+        'pop/false ceiling': 'ફોલ્સ સીલિંગ',
+        'tiles fitter': 'ટાઇલ્સ ફિટર',
+        'modular kitchen': 'મોડ્યુલર કિચન',
+        
+        # Health & Medical
+        'medical': 'મેડિકલ',
+        'hospitals': 'હોસ્પિટલ',
+        'medical store': 'દવાની દુકાન',
+        'opticians': 'ચશ્મા',
+        'blood bank': 'બ્લડ બેંક',
+        'ambulance': 'એમ્બ્યુલન્સ',
+        'laboratories': 'લેબોરેટરી',
+        'nurses': 'નર્સ',
+        'nutritionists/dieticians': 'પોષણ નિષ્ણાત',
+        'dietician': 'આહાર નિષ્ણાત',
+        'physiotherapists': 'ફિઝિયોથેરાપિસ્ટ',
+        
+        # Transportation
+        'auto/taxi': 'ઓટો/ટેક્સી',
+        'bike/scooter repair': 'બાઇક/સ્કૂટર રિપેર',
+        'car mechanic': 'કાર મિકેનિક',
+        'tours & travels': 'ટુર્સ અને ટ્રાવેલ્સ',
+        'transport/tempo services': 'ટ્રાન્સપોર્ટ સેવા',
+        'packers & movers': 'પેકર્સ અને મૂવર્સ',
+        'courier services': 'કુરિયર સેવા',
+        'tyre/puncture shop': 'ટાયર/પંચર',
+        
+        # Legal & Financial
+        'legal services/ lawyer': 'વકીલ',
+        'notary': 'નોટરી',
+        'notary/legal services': 'નોટરી સેવા',
+        'ca/tax consultants': 'સીએ/ટેક્સ સલાહકાર',
+        'financial advisor': 'નાણાકીય સલાહકાર',
+        'insurance agent': 'વીમા એજન્ટ',
+        'insurance agents': 'વીમા એજન્ટ',
+        'gst/accounting services': 'જીએસટી/એકાઉન્ટિંગ',
+        'accounting services': 'એકાઉન્ટિંગ સેવા',
+        'share brokers': 'શેર બ્રોકર',
+        'stock market servicee': 'સ્ટોક માર્કેટ સેવા',
+        'mutual fund advisors': 'મ્યુચ્યુઅલ ફંડ સલાહકાર',
+        
+        # Real Estate
+        'real estate agents': 'રીઅલ એસ્ટેટ એજન્ટ',
+        'estate agent': 'એસ્ટેટ એજન્ટ',
+        'house/shop rentals': 'ઘર/દુકાન ભાડે',
+        'pg/hostels': 'પીજી/હોસ્ટેલ',
+        'homestay': 'હોમસ્ટે',
+        'homestays': 'હોમસ્ટે',
+        
+        # Technology
+        'computer repair': 'કમ્પ્યુટર રિપેર',
+        'computer laptop sales': 'કમ્પ્યુટર લેપટોપ વેચાણ',
+        'cctv installation': 'સીસીટીવી ઇન્સ્ટોલેશન',
+        'website designers': 'વેબસાઇટ ડિઝાઇનર',
+        'digital marketing': 'ડિજિટલ માર્કેટિંગ',
+        'graphic designers': 'ગ્રાફિક ડિઝાઇનર',
+        
+        # Beauty & Wellness
+        'yoga/fitness trainers': 'યોગ/ફિટનેસ ટ્રેનર',
+        'yoga fitness trainers': 'યોગ/ફિટનેસ ટ્રેનર',
+        
+        # Food & Hospitality
+        'restaurants': 'રેસ્ટોરન્ટ',
+        'hotels': 'હોટેલ',
+        'caterars': 'કેટરિંગ',
+        'caterers': 'કેટરિંગ',
+        'sweet shop / mithai': 'મીઠાઈની દુકાન',
+        'sweet shops/mithai': 'મીઠાઈની દુકાન',
+        'cold storage': 'કોલ્ડ સ્ટોરેજ',
+        'ice delivery': 'બરફ ડિલિવરી',
+        'milk delivery': 'દૂધ ડિલિવરી',
+        
+        # Education
+        'tuition classes': 'ટ્યુશન ક્લાસ',
+        'schools': 'શાળા',
+        'coaching classes': 'કોચિંગ ક્લાસ',
+        'teachers': 'શિક્ષક',
+        
+        # Retail
+        'jewellers': 'સોની',
+        'cloths merchant': 'કપડાની દુકાન',
+        'fashion designer': 'ફેશન ડિઝાઇનર',
+        'kirana stores': 'કિરાણાની દુકાન',
+        'electrical stores': 'ઇલેક્ટ્રિકલ સ્ટોર',
+        'hardware stores': 'હાર્ડવેર સ્ટોર',
+        "stationer's": 'સ્ટેશનરી',
+        'stationery': 'સ્ટેશનરી',
+        
+        # Professional Services
+        'photographer/videographer': 'ફોટોગ્રાફર',
+        'photographers / videographers': 'ફોટોગ્રાફર',
+        'printing & flex banner': 'પ્રિન્ટિંગ અને બેનર',
+        'event planners': 'ઇવેન્ટ પ્લાનર',
+        'decoration services': 'ડેકોરેશન સેવા',
+        'decorators': 'ડેકોરેટર',
+        'tent & sound system': 'ટેન્ટ અને સાઉન્ડ',
+        'flower shops': 'ફૂલની દુકાન',
+        'tailor': 'દરજી',
+        
+        # Construction
+        'construction material': 'બાંધકામ સામગ્રી',
+        'civil contractor': 'સિવિલ કોન્ટ્રાક્ટર',
+        'aluminium fabrication': 'એલ્યુમિનિયમ ફેબ્રિકેશન',
+        
+        # Animals & Agriculture
+        'vetenary services / pet services': 'વેટરનરી સેવા',
+        'veterinary/animal care': 'પશુ ચિકિત્સા',
+        'agricultural implements': 'ખેતી સાધનો',
+        
+        # Specialized Services
+        'astrologer / vaastu': 'જ્યોતિષી/વાસ્તુ',
+        'astrology/vaastu': 'જ્યોતિષ/વાસ્તુ',
+        'solar panel installation': 'સોલર પેનલ',
+        'water purifier service': 'વોટર પ્યુરિફાયર',
+        'ro water purifier': 'આરઓ વોટર પ્યુરિફાયર',
+        'water tanker services': 'પાણીની ટાંકી સેવા',
+        'gujarati typist': 'ગુજરાતી ટાઇપિસ્ટ',
+        'dastavej / document writers': 'દસ્તાવેજ લેખક',
+        'importers / exporters': 'આયાત/નિકાસ',
+        'inverter/battery dealers': 'ઇન્વર્ટર/બેટરી',
+        'banks': 'બેંક',
+        'fire services': 'ફાયર સર્વિસ',
+        'disaster repair': 'ડિઝાસ્ટર રિપેર',
+        'babysitters': 'બેબીસીટર',
+        'caretakers/elder care': 'કેરટેકર',
+    }
+    
+    gujarati_name = gujarati_map.get(category_name.lower(), category_name)
+    
     category_obj = {
         'id': category_id,
         'name': category_name,
         'icon': icon,
-        'gu_name': category_name,  # Can be updated with Gujarati names later
+        'gu_name': gujarati_name,
         'providers': categories_data[category_name]['providers']
     }
     

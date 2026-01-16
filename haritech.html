@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hari Tech Solutions - Website Design & Software Development in Bhuj</title>
+    <meta name="description" content="Professional website design and software development services in Bhuj. Custom web solutions, mobile apps, and digital transformation for your business.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #e0f2fe 0%, #d1fae5 100%);
+            color: #1f2937;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header */
+        header {
+            padding: 30px 0;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .logo {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #3b82f6 0%, #22c55e 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            color: #64748b;
+            font-weight: 500;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1e40af 0%, #059669 100%);
+            border-radius: 24px;
+            padding: 80px 50px;
+            text-align: center;
+            margin-bottom: 60px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: white;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.4rem;
+            color: #e0f2fe;
+            max-width: 800px;
+            margin: 0 auto 40px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 40px;
+            border-radius: 12px;
+            font-family: 'Inter', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: white;
+            color: #1e40af;
+            box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px);
+        }
+
+        /* Services Section */
+        .section {
+            margin-bottom: 80px;
+        }
+
+        .section-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 50px;
+            background: linear-gradient(135deg, #3b82f6 0%, #22c55e 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: white;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            border-radius: 20px;
+            padding: 40px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 15px;
+        }
+
+        .service-card p {
+            color: #4b5563;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .service-features {
+            list-style: none;
+        }
+
+        .service-features li {
+            color: #64748b;
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .service-features li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #22c55e;
+            font-weight: bold;
+        }
+
+        /* Portfolio Section */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .portfolio-item {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+
+        .portfolio-image {
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+        }
+
+        .portfolio-content {
+            padding: 25px;
+        }
+
+        .portfolio-content h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 10px;
+        }
+
+        .portfolio-content p {
+            color: #4b5563;
+            font-size: 0.95rem;
+        }
+
+        /* Contact Section */
+        .contact-card {
+            background: linear-gradient(135deg, #1e40af 0%, #059669 100%);
+            border-radius: 24px;
+            padding: 60px;
+            text-align: center;
+        }
+
+        .contact-card h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.2rem;
+            color: #e0f2fe;
+        }
+
+        .contact-item a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: #64748b;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 80px;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 50px 30px;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .services-grid, .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-card {
+                padding: 40px 25px;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="logo">Hari Tech Solutions</div>
+            <div class="tagline">Transforming Ideas into Digital Reality</div>
+        </header>
+
+        <!-- Hero Section -->
+        <div class="hero">
+            <h1>Website Design & Software Development</h1>
+            <p>We create stunning websites and powerful software solutions that help your business grow in the digital world.</p>
+            <div class="hero-buttons">
+                <a href="tel:9512234395" class="btn btn-primary">
+                    📞 Call: 9512234395
+                </a>
+                <a href="https://wa.me/919512234395" target="_blank" class="btn btn-secondary">
+                    💬 WhatsApp Us
+                </a>
+            </div>
+        </div>
+
+        <!-- Services Section -->
+        <div class="section">
+            <h2 class="section-title">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🌐</div>
+                    <h3>Website Design & Development</h3>
+                    <p>Professional, responsive websites that look great on all devices and drive results.</p>
+                    <ul class="service-features">
+                        <li>Custom Website Design</li>
+                        <li>Mobile-Responsive Layout</li>
+                        <li>E-commerce Solutions</li>
+                        <li>SEO Optimization</li>
+                        <li>Fast Loading Speed</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">💻</div>
+                    <h3>Software Development</h3>
+                    <p>Custom software solutions tailored to your business needs and workflows.</p>
+                    <ul class="service-features">
+                        <li>Business Management Systems</li>
+                        <li>Inventory Management</li>
+                        <li>Billing & Accounting Software</li>
+                        <li>CRM Solutions</li>
+                        <li>API Integration</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">📱</div>
+                    <h3>Mobile App Development</h3>
+                    <p>Native and cross-platform mobile applications for iOS and Android.</p>
+                    <ul class="service-features">
+                        <li>Android App Development</li>
+                        <li>iOS App Development</li>
+                        <li>Cross-Platform Apps</li>
+                        <li>App Store Deployment</li>
+                        <li>Maintenance & Support</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🎨</div>
+                    <h3>UI/UX Design</h3>
+                    <p>Beautiful, user-friendly designs that enhance user experience and engagement.</p>
+                    <ul class="service-features">
+                        <li>User Interface Design</li>
+                        <li>User Experience Design</li>
+                        <li>Wireframing & Prototyping</li>
+                        <li>Brand Identity Design</li>
+                        <li>Design Systems</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🚀</div>
+                    <h3>Digital Marketing</h3>
+                    <p>Grow your online presence and reach more customers with our digital marketing services.</p>
+                    <ul class="service-features">
+                        <li>Social Media Marketing</li>
+                        <li>Google Ads Management</li>
+                        <li>Content Marketing</li>
+                        <li>Email Marketing</li>
+                        <li>Analytics & Reporting</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🛠️</div>
+                    <h3>Maintenance & Support</h3>
+                    <p>Ongoing support and maintenance to keep your digital assets running smoothly.</p>
+                    <ul class="service-features">
+                        <li>Website Maintenance</li>
+                        <li>Security Updates</li>
+                        <li>Bug Fixes</li>
+                        <li>Performance Optimization</li>
+                        <li>24/7 Technical Support</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Portfolio Section -->
+        <div class="section">
+            <h2 class="section-title">Our Work</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <div class="portfolio-image">🏪</div>
+                    <div class="portfolio-content">
+                        <h3>Bhuj Online Directory</h3>
+                        <p>A comprehensive local business directory connecting customers with service providers in Bhuj.</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-image">🌍</div>
+                    <div class="portfolio-content">
+                        <h3>MyKutch.org</h3>
+                        <p>Community platform showcasing the culture, heritage, and businesses of Kutch region.</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-image">✈️</div>
+                    <div class="portfolio-content">
+                        <h3>TravelKutch.org</h3>
+                        <p>Tourism portal featuring destinations, attractions, and travel information for Kutch.</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-image">🏢</div>
+                    <div class="portfolio-content">
+                        <h3>Business Websites</h3>
+                        <p>Professional websites for local businesses including shops, restaurants, and service providers.</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-image">📊</div>
+                    <div class="portfolio-content">
+                        <h3>Custom Software Solutions</h3>
+                        <p>Tailored software applications for inventory management, billing, and business operations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="contact-card">
+            <h2>Let's Build Something Amazing Together</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    📞 <a href="tel:9512234395">9512234395</a>
+                </div>
+                <div class="contact-item">
+                    💬 <a href="https://wa.me/919512234395" target="_blank">WhatsApp</a>
+                </div>
+                <div class="contact-item">
+                    🌐 <a href="https://haritech.in" target="_blank">haritech.in</a>
+                </div>
+            </div>
+            <p style="color: #e0f2fe; margin-top: 20px;">Based in Bhuj, Gujarat | Serving clients across India</p>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2026 Hari Tech Solutions. All rights reserved.</p>
+            <p>Professional Website Design & Software Development Services in Bhuj</p>
+        </footer>
+    </div>
+</body>
+</html>

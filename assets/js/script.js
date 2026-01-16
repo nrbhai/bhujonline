@@ -140,6 +140,14 @@ function renderProviders(providers, container) {
                 <a href="https://wa.me/${waNumber}" target="_blank" class="action-btn btn-whatsapp">
                     💬 WhatsApp
                 </a>
+                ${p.webpage ? 
+                    `<a href="${p.webpage}" target="_blank" class="action-btn btn-webpage">
+                        🌐 Webpage
+                    </a>` :
+                    `<button class="action-btn btn-webpage btn-disabled" disabled>
+                        🌐 Webpage
+                    </button>`
+                }
             </div>
         </li>
         `;

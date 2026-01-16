@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Your Business Webpage - Bhuj Online</title>
+    <meta name="description" content="Get your professional business webpage for just Rs. 699/year. Introductory offer for Bhuj businesses.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #e0f2fe 0%, #d1fae5 100%);
+            color: #1f2937;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 0;
+            margin-bottom: 40px;
+        }
+
+        nav a {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #4F46E5;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: #4338CA;
+            text-decoration: underline;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .hero h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #4F46E5 0%, #22c55e 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+
+        .hero p {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.4rem;
+            color: #6b7280;
+            max-width: 750px;
+            margin: 0 auto 30px;
+            font-weight: 400;
+        }
+
+        .pricing-card {
+            background: white;
+            background-image: radial-gradient(circle, #e5e7eb 1px, transparent 1px);
+            background-size: 20px 20px;
+            border-radius: 24px;
+            padding: 50px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pricing-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, #4F46E5 0%, #22c55e 100%);
+        }
+
+        .badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+            color: white;
+            padding: 10px 24px;
+            border-radius: 50px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        .price {
+            font-family: 'Poppins', sans-serif;
+            font-size: 5rem;
+            font-weight: 900;
+            color: #4F46E5;
+            margin: 20px 0;
+            line-height: 1;
+        }
+
+        .price span {
+            font-size: 3rem;
+            color: #6b7280;
+            margin-right: 8px;
+        }
+
+        .duration {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.3rem;
+            color: #6b7280;
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+
+        .original-price {
+            font-family: 'Inter', sans-serif;
+            text-decoration: line-through;
+            color: #9ca3af;
+            font-size: 1.6rem;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        .samples {
+            background: white;
+            background-image: radial-gradient(circle, #e5e7eb 1px, transparent 1px);
+            background-size: 20px 20px;
+            border-radius: 24px;
+            padding: 50px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            margin-bottom: 50px;
+        }
+
+        .samples h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #1f2937;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .samples p {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.1rem;
+            color: #6b7280;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .sample-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .sample-item {
+            background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .sample-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .sample-placeholder {
+            background: linear-gradient(135deg, #ddd6fe 0%, #c4b5fd 100%);
+            border-radius: 12px;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #6b21a8;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .sample-item h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 8px;
+        }
+
+        .sample-item p {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            color: #6b7280;
+            text-align: left;
+        }
+
+        .features {
+            background: white;
+            background-image: radial-gradient(circle, #e5e7eb 1px, transparent 1px);
+            background-size: 20px 20px;
+            border-radius: 20px;
+            padding: 45px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+
+        .features h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #1f2937;
+            margin-bottom: 35px;
+            text-align: center;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            flex-shrink: 0;
+        }
+
+        .feature-text h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 5px;
+        }
+
+        .feature-text p {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            color: #6b7280;
+            line-height: 1.5;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+            color: white;
+            padding: 20px 55px;
+            border-radius: 14px;
+            font-family: 'Inter', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            text-decoration: none;
+            box-shadow: 0 12px 30px rgba(34, 197, 94, 0.35);
+            transition: all 0.3s ease;
+            letter-spacing: 0.3px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 18px 40px rgba(34, 197, 94, 0.45);
+        }
+
+        .contact {
+            text-align: center;
+            background: white;
+            background-image: radial-gradient(circle, #e5e7eb 1px, transparent 1px);
+            background-size: 20px 20px;
+            padding: 35px;
+            border-radius: 18px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .contact h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .contact p {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.1rem;
+            color: #6b7280;
+        }
+
+        .contact a {
+            color: #4F46E5;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            .hero p {
+                font-size: 1.1rem;
+            }
+            .price {
+                font-size: 3.5rem;
+            }
+            .pricing-card, .samples, .features {
+                padding: 30px 20px;
+            }
+            .sample-grid, .feature-grid {
+                grid-template-columns: 1fr;
+            }
+            .cta-button {
+                font-size: 1.2rem;
+                padding: 16px 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="index.html">🏠 Back to Home</a>
+            <a href="#contact">📞 Contact Us</a>
+        </nav>
+
+        <div class="hero">
+            <h1>Get Your Business Online Today!</h1>
+            <p>Professional webpage for your business in Bhuj. Attract more customers and grow your business with a stunning online presence.</p>
+        </div>
+
+        <div class="pricing-card">
+            <div class="badge">🎉 Introductory Offer</div>
+            <div class="original-price">Regular Price: ₹2,999</div>
+            <div class="price"><span>₹</span>699</div>
+            <div class="duration">For 1 Full Year</div>
+            <a href="tel:9512234395" class="cta-button">
+                📞 Call Now: 9512234395
+            </a>
+        </div>
+
+        <div class="samples">
+            <h2>See What You'll Get</h2>
+            <p>Beautiful, professional webpages designed for local businesses</p>
+            <div class="sample-grid">
+                <div class="sample-item">
+                    <div class="sample-placeholder">
+                        📱<br>Service Business<br>Example
+                    </div>
+                    <h3>Service Provider</h3>
+                    <p>Perfect for electricians, plumbers, mechanics, and other service professionals</p>
+                </div>
+                <div class="sample-item">
+                    <div class="sample-placeholder">
+                        🏪<br>Shop/Restaurant<br>Example
+                    </div>
+                    <h3>Retail & Food</h3>
+                    <p>Ideal for shops, restaurants, cafes, and retail businesses</p>
+                </div>
+                <div class="sample-item">
+                    <div class="sample-placeholder">
+                        👨‍⚕️<br>Professional<br>Example
+                    </div>
+                    <h3>Professionals</h3>
+                    <p>Great for doctors, lawyers, consultants, and other professionals</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="features">
+            <h2>What You Get</h2>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">🌐</div>
+                    <div class="feature-text">
+                        <h3>Professional Webpage</h3>
+                        <p>Beautiful, mobile-friendly design tailored for your business</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📱</div>
+                    <div class="feature-text">
+                        <h3>Mobile Responsive</h3>
+                        <p>Looks perfect on all devices - phone, tablet, desktop</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">⚡</div>
+                    <div class="feature-text">
+                        <h3>Fast Loading</h3>
+                        <p>Quick page loads for better customer experience</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🔗</div>
+                    <div class="feature-text">
+                        <h3>Listed on Bhuj Online</h3>
+                        <p>Your webpage linked from our directory with active button</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📞</div>
+                    <div class="feature-text">
+                        <h3>Contact Information</h3>
+                        <p>Phone, WhatsApp, location - all included and clickable</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🎨</div>
+                    <div class="feature-text">
+                        <h3>Custom Design</h3>
+                        <p>Tailored to match your business style and brand</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact" id="contact">
+            <h3>Questions? We're Here to Help!</h3>
+            <p>Contact Hari Tech Solutions</p>
+            <p>📞 <a href="tel:9512234395">9512234395</a></p>
+            <p>💬 <a href="https://wa.me/919512234395" target="_blank">WhatsApp Us</a></p>
+        </div>
+    </div>
+</body>
+</html>

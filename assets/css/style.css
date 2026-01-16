@@ -356,6 +356,8 @@ h1 a {
     background: var(--link-color);
     color: white;
     box-shadow: 0 4px 6px -1px rgba(79, 70, 229, 0.2);
+    font-size: 0.75rem; /* Smaller font for phone numbers */
+    white-space: nowrap; /* Prevent wrapping */
 }
 
 .btn-call:hover {

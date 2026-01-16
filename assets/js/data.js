@@ -415,6 +415,14 @@ window.bhujData = [
                 "tags": [
                     "Cloths Merchant"
                 ]
+            },
+            {
+                "name": "Atifa Ajarakh and Bandhani Boutique",
+                "phone": "9702376033",
+                "area": "Bhuj",
+                "tags": [
+                    "Cloths Merchant"
+                ]
             }
         ]
     },
@@ -470,6 +478,14 @@ window.bhujData = [
                 "area": "Station Road",
                 "tags": [
                     "Since 1993"
+                ]
+            },
+            {
+                "name": "Raj informatics",
+                "phone": "9825538167",
+                "area": "Bhuj",
+                "tags": [
+                    "Computer Laptop repairs"
                 ]
             }
         ]
@@ -761,6 +777,14 @@ window.bhujData = [
             {
                 "name": "OM ENTERPRISE ( AMIT DALAL)",
                 "phone": "9925551966",
+                "area": "Bhuj",
+                "tags": [
+                    "Financial advisor"
+                ]
+            },
+            {
+                "name": "Kripalsinh Mahendrasinh Parmar",
+                "phone": "9157160050",
                 "area": "Bhuj",
                 "tags": [
                     "Financial advisor"
@@ -1150,11 +1174,11 @@ window.bhujData = [
         "gu_name": "જ્વેલર્સ",
         "providers": [
             {
-                "name": "Sample Jeweller",
-                "phone": "123",
+                "name": "Rajesh Pomal",
+                "phone": "9825346141",
                 "area": "Bhuj",
                 "tags": [
-                    "Test"
+                    "Jeweller"
                 ]
             }
         ]
@@ -1268,6 +1292,14 @@ window.bhujData = [
                 "tags": [
                     "Legal Services/ Lawyer"
                 ]
+            },
+            {
+                "name": "Haresh maheshwari",
+                "phone": "9428895873",
+                "area": "Bhuj",
+                "tags": [
+                    "Legal Services/ Lawyer"
+                ]
             }
         ]
     },
@@ -1339,6 +1371,14 @@ window.bhujData = [
                 "area": "Hospital Road",
                 "tags": [
                     "24x7"
+                ]
+            },
+            {
+                "name": "MEDI POINT (HOMOEOPATHIC PHARMACY)",
+                "phone": "9426473153",
+                "area": "Bhuj",
+                "tags": [
+                    "Medical store"
                 ]
             },
             {
@@ -1760,6 +1800,14 @@ window.bhujData = [
                 "tags": [
                     "Test"
                 ]
+            },
+            {
+                "name": "Zameer suresh Bhai kotak",
+                "phone": "9925026366",
+                "area": "Bhuj",
+                "tags": [
+                    "Estate Agent"
+                ]
             }
         ]
     },
@@ -1876,6 +1924,14 @@ window.bhujData = [
                 ]
             },
             {
+                "name": "Dipen gor",
+                "phone": "8200468240",
+                "area": "Bhuj",
+                "tags": [
+                    "Stock Market Service"
+                ]
+            },
+            {
                 "name": "Angel One",
                 "phone": "8044952453",
                 "area": "RTO Ring Road",
@@ -1899,11 +1955,11 @@ window.bhujData = [
         "gu_name": "સોલર પેનલ",
         "providers": [
             {
-                "name": "Sample Solar",
-                "phone": "123",
+                "name": "Chetan gusai",
+                "phone": "7984013866",
                 "area": "Bhuj",
                 "tags": [
-                    "Test"
+                    "Solar Panel Installation"
                 ]
             }
         ]
@@ -1963,11 +2019,11 @@ window.bhujData = [
         "gu_name": "મીઠાઈ",
         "providers": [
             {
-                "name": "Sample Sweets",
-                "phone": "123",
+                "name": "Madhuram mukhwas",
+                "phone": "7990170387",
                 "area": "Bhuj",
                 "tags": [
-                    "Test"
+                    "Sweet shop / Mithai"
                 ]
             }
         ]
@@ -2033,7 +2089,16 @@ window.bhujData = [
         "name": "Teachers",
         "icon": "👨‍🏫",
         "gu_name": "શિક્ષકો",
-        "providers": []
+        "providers": [
+            {
+                "name": "Nirali mahichchha",
+                "phone": "9727323419",
+                "area": "Bhuj",
+                "tags": [
+                    "Teachers"
+                ]
+            }
+        ]
     },
     {
         "id": "tent-sound-system",
@@ -2264,33 +2329,6 @@ window.bhujData = [
         "gu_name": "વેબસાઇટ ડિઝાઇનર",
         "providers": [
             {
-                "name": "Infinitie Technologies",
-                "phone": "9879511222",
-                "area": "Station Road",
-                "tags": [
-                    "Web",
-                    "App"
-                ]
-            },
-            {
-                "name": "WRTeam",
-                "phone": "9797945459",
-                "area": "Time Square Empire",
-                "tags": [
-                    "Software",
-                    "App"
-                ]
-            },
-            {
-                "name": "Bigimmense IT",
-                "phone": "7417890719",
-                "area": "Bhuj HO",
-                "tags": [
-                    "SEO",
-                    "Web"
-                ]
-            },
-            {
                 "name": "Hari Tech Solutions",
                 "phone": "9512234395",
                 "area": "Bhuj",
@@ -2313,6 +2351,14 @@ window.bhujData = [
                 "area": "Bhuj",
                 "tags": [
                     "Test"
+                ]
+            },
+            {
+                "name": "Yog coach Reena Kalpesh gor (Aditi yoga classes)",
+                "phone": "9727434817",
+                "area": "Bhuj",
+                "tags": [
+                    "Yoga fitness trainers"
                 ]
             }
         ]

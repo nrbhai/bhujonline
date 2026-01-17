@@ -352,9 +352,11 @@ h1 a {
 }
 
 .cat-icon {
-    font-size: 2.2rem; /* Optimized size */
+    font-size: 2.5rem; /* Larger for Font Awesome */
     margin-bottom: 4px;
     transition: transform 0.3s ease;
+    color: #4F46E5; /* Indigo color for icons */
+    display: block;
 }
 
 .cat-text {

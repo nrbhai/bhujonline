@@ -32,7 +32,7 @@ function initHomePage() {
         const html = categories.map(cat => `
             <li>
                 <a href="category.html?id=${cat.id}">
-                    <span class="cat-icon">${cat.icon}</span>
+                    <i class="${cat.icon} cat-icon"></i>
                     <span class="cat-text">
                         <span class="cat-name-en">${cat.name}</span>
                         <span class="cat-name-gu">${cat.gu_name}</span>

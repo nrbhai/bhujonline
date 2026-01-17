@@ -49,6 +49,21 @@ function initHomePage() {
 
     // Search functionality
     if (searchInput) {
+        // Mobile optimization: Add search-active class on focus
+        searchInput.addEventListener('focus', () => {
+            if (window.innerWidth <= 600) {
+                document.body.classList.add('search-active');
+            }
+        });
+
+        // Remove search-active class when user scrolls or clicks outside
+        searchInput.addEventListener('blur', () => {
+            // Small delay to allow click events to process
+            setTimeout(() => {
+                document.body.classList.remove('search-active');
+            }, 200);
+        });
+
         searchInput.addEventListener('input', (e) => {
             const query = e.target.value.toLowerCase().trim();
             const filtered = allCategories.filter(cat =>
@@ -96,6 +111,18 @@ function initCategoryPage() {
     renderProviders(data.providers, container);
 
     // Search filter
+    searchInput.addEventListener('focus', () => {
+        if (window.innerWidth <= 600) {
+            document.body.classList.add('search-active');
+        }
+    });
+
+    searchInput.addEventListener('blur', () => {
+        setTimeout(() => {
+            document.body.classList.remove('search-active');
+        }, 200);
+    });
+
     searchInput.addEventListener('input', (e) => {
         const query = e.target.value.toLowerCase();
         const filtered = data.providers.filter(p =>

@@ -223,6 +223,15 @@ const categoriesData = [
         "area": "Bhuj",
         "tags": [],
         "webpage": ""
+      },
+      {
+        "name": "વૈધ સંદિપ ઠક્કર. આયુર્વેદિક વૈધ.",
+        "phone": "8758359073",
+        "area": "",
+        "tags": [
+          "Ayurvedic"
+        ],
+        "webpage": ""
       }
     ]
   },
@@ -316,6 +325,32 @@ const categoriesData = [
         "area": "Bhuj",
         "tags": [
           "Test"
+        ],
+        "webpage": ""
+      }
+    ]
+  },
+  {
+    "id": "ca",
+    "name": "CA",
+    "icon": "📋",
+    "gu_name": "CA",
+    "providers": [
+      {
+        "name": "MANAD ANJARIYA",
+        "phone": "9409475070",
+        "area": "",
+        "tags": [
+          "Chartered Accountant"
+        ],
+        "webpage": ""
+      },
+      {
+        "name": "Zahir meman",
+        "phone": "9825235019",
+        "area": "",
+        "tags": [
+          "Chartered Accountant"
         ],
         "webpage": ""
       }
@@ -428,6 +463,15 @@ const categoriesData = [
         "area": "Station Road",
         "tags": [
           "Decor"
+        ],
+        "webpage": ""
+      },
+      {
+        "name": "Haresh Parmar",
+        "phone": "7016742261",
+        "area": "",
+        "tags": [
+          "Carpenter"
         ],
         "webpage": ""
       }
@@ -899,6 +943,15 @@ const categoriesData = [
           "Electrician"
         ],
         "webpage": ""
+      },
+      {
+        "name": "Sultan Sama",
+        "phone": "8905209693",
+        "area": "",
+        "tags": [
+          "Electrician"
+        ],
+        "webpage": ""
       }
     ]
   },
@@ -952,6 +1005,15 @@ const categoriesData = [
           "Estate Agent"
         ],
         "webpage": ""
+      },
+      {
+        "name": "Pradip Shah",
+        "phone": "9925095909",
+        "area": "",
+        "tags": [
+          "Real Estate"
+        ],
+        "webpage": ""
       }
     ]
   },
@@ -993,6 +1055,15 @@ const categoriesData = [
         "area": "Bhuj",
         "tags": [
           "Fashion Designer"
+        ],
+        "webpage": ""
+      },
+      {
+        "name": "\"NASIR BANDHANI SAREES\"",
+        "phone": "9998277602",
+        "area": "",
+        "tags": [
+          "Bandhani"
         ],
         "webpage": ""
       }
@@ -1088,6 +1159,23 @@ const categoriesData = [
     ]
   },
   {
+    "id": "financial-advisor",
+    "name": "Financial advisor",
+    "icon": "💰",
+    "gu_name": "નાણાકીય સલાહકાર",
+    "providers": [
+      {
+        "name": "Samir Shah money investment",
+        "phone": "9825422712",
+        "area": "",
+        "tags": [
+          "Financial Services"
+        ],
+        "webpage": ""
+      }
+    ]
+  },
+  {
     "id": "fire-services",
     "name": "Fire Services",
     "icon": "🚒",
@@ -1167,6 +1255,16 @@ const categoriesData = [
         "area": "Bhuj",
         "tags": [
           "Typing"
+        ],
+        "webpage": ""
+      },
+      {
+        "name": "Rajiv mehta",
+        "phone": "7046183980",
+        "area": "",
+        "tags": [
+          "Gujarati Typist",
+          "Jobwork"
         ],
         "webpage": ""
       }
@@ -1849,6 +1947,16 @@ const categoriesData = [
         "phone": "9825632519",
         "area": "Bhuj",
         "tags": [
+          "Notary"
+        ],
+        "webpage": ""
+      },
+      {
+        "name": "Bharat v sheth",
+        "phone": "9825208220",
+        "area": "",
+        "tags": [
+          "Lawyer",
           "Notary"
         ],
         "webpage": ""

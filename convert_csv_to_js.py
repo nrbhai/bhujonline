@@ -251,11 +251,14 @@ for category_name in sorted(categories_data.keys()):
         
         # Agriculture & Animals
         'veterinary': '🐾',
+        'veterinary doctor': '👨‍⚕️',
         'vetenary services / pet services': '🐾',
-        'veterinary/animal care': '🐾',
+        'pet products': '🐾',
+        'veterinary/animal care': '👨‍⚕️',
         'pet shop': '🐕',
         'agriculture': '🌾',
         'agricultural implements': '🚜',
+        'agricultural equipments': '🚜',
         'seeds': '🌱',
         
         # Specialized Services

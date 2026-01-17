@@ -75,7 +75,7 @@ const categoriesData = [
   {
     "id": "agricultural-equipments",
     "name": "Agricultural Equipments",
-    "icon": "📋",
+    "icon": "🚜",
     "gu_name": "Agricultural Equipments",
     "providers": [
       {
@@ -2119,6 +2119,23 @@ const categoriesData = [
     ]
   },
   {
+    "id": "pet-products",
+    "name": "Pet Products",
+    "icon": "🐾",
+    "gu_name": "Pet Products",
+    "providers": [
+      {
+        "name": "Malhar Dave",
+        "phone": "6353340670",
+        "area": "Bhuj",
+        "tags": [
+          "Pet Products"
+        ],
+        "webpage": ""
+      }
+    ]
+  },
+  {
     "id": "photographer/videographer",
     "name": "Photographer/Videographer",
     "icon": "📸",
@@ -2824,27 +2841,10 @@ const categoriesData = [
     ]
   },
   {
-    "id": "vetenary-services-/-pet-services",
-    "name": "Vetenary Services / Pet Services",
-    "icon": "🐾",
-    "gu_name": "વેટરનરી સેવા",
-    "providers": [
-      {
-        "name": "Malhar Dave",
-        "phone": "6353340670",
-        "area": "Bhuj",
-        "tags": [
-          "Vetenary Services / Pet Services"
-        ],
-        "webpage": ""
-      }
-    ]
-  },
-  {
-    "id": "veterinary/animal-care",
-    "name": "Veterinary/Animal Care",
-    "icon": "🐾",
-    "gu_name": "પશુ ચિકિત્સા",
+    "id": "veterinary-doctor",
+    "name": "Veterinary Doctor",
+    "icon": "👨‍⚕️",
+    "gu_name": "Veterinary Doctor",
     "providers": [
       {
         "name": "",

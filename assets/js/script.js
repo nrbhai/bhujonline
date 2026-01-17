@@ -73,83 +73,66 @@ function initHomePage() {
             render(filtered);
         });
 
-        // Voice Search Implementation
+        // Voice Search Implementation - Simplified for Mobile
         const voiceBtn = document.getElementById('voice-search-btn');
         
         if (voiceBtn) {
-            // Check if browser supports speech recognition
             const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
             
-            if (SpeechRecognition) {
-                const recognition = new SpeechRecognition();
-                recognition.continuous = false;
-                recognition.interimResults = false;
-                recognition.maxAlternatives = 1;
-                
-                // Support both English and Gujarati
-                recognition.lang = 'en-IN';
-                
-                let isListening = false;
-                
-                voiceBtn.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    
-                    if (isListening) {
-                        recognition.stop();
-                        return;
-                    }
-                    
-                    try {
-                        recognition.start();
-                        isListening = true;
-                        voiceBtn.classList.add('listening');
-                        searchInput.placeholder = 'Listening... 🎤';
-                    } catch (error) {
-                        console.error('Recognition start error:', error);
-                        alert('Could not start voice recognition. Please try again.');
-                    }
-                });
-
-                recognition.onresult = (event) => {
-                    const transcript = event.results[0][0].transcript;
-                    searchInput.value = transcript;
-                    
-                    // Trigger search
-                    const inputEvent = new Event('input', { bubbles: true });
-                    searchInput.dispatchEvent(inputEvent);
-                    
-                    isListening = false;
-                    voiceBtn.classList.remove('listening');
-                    searchInput.placeholder = 'Search services (e.g., Electrician, Taxi)...';
-                };
-
-                recognition.onerror = (event) => {
-                    console.error('Speech recognition error:', event.error);
-                    isListening = false;
-                    voiceBtn.classList.remove('listening');
-                    searchInput.placeholder = 'Search services (e.g., Electrician, Taxi)...';
-                    
-                    if (event.error === 'no-speech') {
-                        alert('No speech detected. Please try again.');
-                    } else if (event.error === 'not-allowed') {
-                        alert('Microphone access denied. Please enable microphone permissions in your browser settings.');
-                    } else if (event.error === 'network') {
-                        alert('Network error. Please check your connection.');
-                    }
-                };
-
-                recognition.onend = () => {
-                    isListening = false;
-                    voiceBtn.classList.remove('listening');
-                    searchInput.placeholder = 'Search services (e.g., Electrician, Taxi)...';
-                };
-            } else {
-                // Browser doesn't support speech recognition
-                voiceBtn.disabled = true;
-                voiceBtn.title = 'Voice search not supported in this browser';
-                voiceBtn.style.opacity = '0.3';
+            if (!SpeechRecognition) {
+                voiceBtn.style.display = 'none';
+                return;
             }
+
+            const recognition = new SpeechRecognition();
+            recognition.lang = 'en-IN';
+            recognition.interimResults = false;
+            recognition.maxAlternatives = 1;
+
+            const startRecognition = () => {
+                voiceBtn.classList.add('listening');
+                searchInput.placeholder = '🎤 Listening...';
+                
+                recognition.start();
+            };
+
+            const stopRecognition = () => {
+                voiceBtn.classList.remove('listening');
+                searchInput.placeholder = 'Search services (e.g., Electrician, Taxi)...';
+            };
+
+            // Handle both click and touch events for mobile
+            voiceBtn.addEventListener('touchstart', (e) => {
+                e.preventDefault();
+                startRecognition();
+            }, { passive: false });
+
+            voiceBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                startRecognition();
+            });
+
+            recognition.onresult = (event) => {
+                const transcript = event.results[0][0].transcript;
+                searchInput.value = transcript;
+                searchInput.dispatchEvent(new Event('input', { bubbles: true }));
+                stopRecognition();
+            };
+
+            recognition.onerror = (event) => {
+                console.log('Voice error:', event.error);
+                stopRecognition();
+                
+                if (event.error === 'not-allowed') {
+                    setTimeout(() => {
+                        alert('Please allow microphone access to use voice search');
+                    }, 100);
+                }
+            };
+
+            recognition.onend = () => {
+                stopRecognition();
+            };
         }
     }
 }

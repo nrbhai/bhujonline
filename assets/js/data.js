@@ -92,7 +92,7 @@ const categoriesData = [
   {
     "id": "allopathy-doctors-mbbs",
     "name": "Allopathy Doctors MBBS",
-    "icon": "📋",
+    "icon": "👨‍⚕️",
     "gu_name": "Allopathy Doctors MBBS",
     "providers": [
       {
@@ -107,7 +107,7 @@ const categoriesData = [
   {
     "id": "allopathy-doctors-md-(-specialist-)",
     "name": "Allopathy Doctors MD ( Specialist )",
-    "icon": "📋",
+    "icon": "👨‍⚕️",
     "gu_name": "Allopathy Doctors MD ( Specialist )",
     "providers": [
       {
@@ -122,7 +122,7 @@ const categoriesData = [
   {
     "id": "allopathy-doctors-md-physician",
     "name": "Allopathy Doctors MD Physician",
-    "icon": "📋",
+    "icon": "👨‍⚕️",
     "gu_name": "Allopathy Doctors MD Physician",
     "providers": [
       {
@@ -214,7 +214,7 @@ const categoriesData = [
   {
     "id": "ayurvedic-doctors",
     "name": "Ayurvedic Doctors",
-    "icon": "📋",
+    "icon": "👨‍⚕️",
     "gu_name": "Ayurvedic Doctors",
     "providers": [
       {
@@ -333,7 +333,7 @@ const categoriesData = [
   {
     "id": "ca",
     "name": "CA",
-    "icon": "📋",
+    "icon": "🧮",
     "gu_name": "CA",
     "providers": [
       {
@@ -359,7 +359,7 @@ const categoriesData = [
   {
     "id": "ca-(-chartered-accountants-)",
     "name": "CA ( Chartered Accountants )",
-    "icon": "📋",
+    "icon": "🧮",
     "gu_name": "CA ( Chartered Accountants )",
     "providers": [
       {
@@ -1037,7 +1037,7 @@ const categoriesData = [
   {
     "id": "fashion-designer",
     "name": "Fashion Designer",
-    "icon": "👗",
+    "icon": "✂️",
     "gu_name": "ફેશન ડિઝાઇનર",
     "providers": [
       {
@@ -1273,7 +1273,7 @@ const categoriesData = [
   {
     "id": "hair-stylist-(-m-/-f-)",
     "name": "Hair Stylist ( M / F )",
-    "icon": "📋",
+    "icon": "💇",
     "gu_name": "Hair Stylist ( M / F )",
     "providers": [
       {
@@ -1305,7 +1305,7 @@ const categoriesData = [
   {
     "id": "homeopathy-doctors",
     "name": "Homeopathy Doctors",
-    "icon": "📋",
+    "icon": "👨‍⚕️",
     "gu_name": "Homeopathy Doctors",
     "providers": [
       {
@@ -1530,7 +1530,7 @@ const categoriesData = [
   {
     "id": "insurance-companies",
     "name": "Insurance Companies",
-    "icon": "📋",
+    "icon": "🏢",
     "gu_name": "Insurance Companies",
     "providers": [
       {
@@ -1599,7 +1599,7 @@ const categoriesData = [
   {
     "id": "jeweller",
     "name": "Jeweller",
-    "icon": "💎",
+    "icon": "💍",
     "gu_name": "Jeweller",
     "providers": [
       {

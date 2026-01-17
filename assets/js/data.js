@@ -92,7 +92,7 @@ const categoriesData = [
   {
     "id": "allopathy-doctors-mbbs",
     "name": "Allopathy Doctors MBBS",
-    "icon": "noto-v1:health-worker",
+    "icon": "noto-v1:stethoscope",
     "gu_name": "Allopathy Doctors MBBS",
     "providers": [
       {
@@ -107,7 +107,7 @@ const categoriesData = [
   {
     "id": "allopathy-doctors-md-(-specialist-)",
     "name": "Allopathy Doctors MD ( Specialist )",
-    "icon": "noto-v1:health-worker",
+    "icon": "noto-v1:medical-symbol",
     "gu_name": "Allopathy Doctors MD ( Specialist )",
     "providers": [
       {
@@ -122,7 +122,7 @@ const categoriesData = [
   {
     "id": "allopathy-doctors-md-physician",
     "name": "Allopathy Doctors MD Physician",
-    "icon": "noto-v1:health-worker",
+    "icon": "noto-v1:syringe",
     "gu_name": "Allopathy Doctors MD Physician",
     "providers": [
       {
@@ -214,7 +214,7 @@ const categoriesData = [
   {
     "id": "ayurvedic-doctors",
     "name": "Ayurvedic Doctors",
-    "icon": "noto-v1:health-worker",
+    "icon": "noto-v1:herb",
     "gu_name": "Ayurvedic Doctors",
     "providers": [
       {
@@ -1305,7 +1305,7 @@ const categoriesData = [
   {
     "id": "homeopathy-doctors",
     "name": "Homeopathy Doctors",
-    "icon": "noto-v1:health-worker",
+    "icon": "noto-v1:pill",
     "gu_name": "Homeopathy Doctors",
     "providers": [
       {

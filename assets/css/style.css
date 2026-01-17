@@ -355,8 +355,20 @@ h1 a {
     font-size: 2.5rem; /* Larger for Font Awesome */
     margin-bottom: 4px;
     transition: transform 0.3s ease;
-    color: #4F46E5; /* Indigo color for icons */
     display: block;
+    /* Multi-color gradient effect */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Hover effect - brighter gradient */
+.category-list a:hover .cat-icon {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .cat-text {

@@ -16,7 +16,7 @@
     <meta name="description" content="Professional website design and software development services in Bhuj. Custom web solutions, mobile apps, and digital transformation for your business.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -40,19 +40,39 @@
         /* Header */
         header {
             padding: 30px 0;
-            text-align: center;
+            text-align: left; /* Left align header content */
             margin-bottom: 60px;
         }
 
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start; /* Left align logo image */
+            margin-bottom: 0px;
+        }
+
+        .logo-img {
+            height: 48px;
+            width: auto;
+        }
+
+        .header-text-center {
+            text-align: center;
+            margin-top: 40px; /* Shift 2 lines down */
+        }
+
         .logo {
-            font-family: 'Poppins', sans-serif;
-            font-size: 2.5rem;
-            font-weight: 900;
-            background: linear-gradient(135deg, #3b82f6 0%, #22c55e 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 10px;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3.2rem;
+            font-weight: 700;
+            color: #2563eb; /* Bright Blue */
+            filter: drop-shadow(0 0 5px rgba(59, 130, 246, 0.8));
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            color: #64748b;
+            font-weight: 500;
         }
 
         .tagline {
@@ -63,21 +83,24 @@
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #1e40af 0%, #059669 100%);
+            background: linear-gradient(135deg, #4c1d95 0%, #3b82f6 100%); /* Deep Purple to Blue */
             border-radius: 24px;
             padding: 80px 50px;
             text-align: center;
             margin-bottom: 60px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 20px 60px rgba(76, 29, 149, 0.4);
+            position: relative;
+            overflow: hidden;
         }
 
         .hero h1 {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Orbitron', sans-serif;
             font-size: 3.5rem;
             font-weight: 900;
             color: white;
             margin-bottom: 20px;
             line-height: 1.2;
+            text-shadow: 0 4px 10px rgba(0,0,0,0.3);
         }
 
         .hero p {
@@ -135,7 +158,7 @@
         }
 
         .section-title {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Orbitron', sans-serif;
             font-size: 2.5rem;
             font-weight: 800;
             text-align: center;
@@ -173,7 +196,7 @@
         }
 
         .service-card h3 {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Orbitron', sans-serif;
             font-size: 1.5rem;
             font-weight: 700;
             color: #1f2937;
@@ -226,7 +249,7 @@
         }
 
         .portfolio-image {
-            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            background: linear-gradient(135deg, #4c1d95 0%, #3b82f6 100%);
             height: 200px;
             display: flex;
             align-items: center;
@@ -239,7 +262,7 @@
         }
 
         .portfolio-content h3 {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Orbitron', sans-serif;
             font-size: 1.3rem;
             font-weight: 700;
             color: #1f2937;
@@ -253,14 +276,14 @@
 
         /* Contact Section */
         .contact-card {
-            background: linear-gradient(135deg, #1e40af 0%, #059669 100%);
+            background: linear-gradient(135deg, #4c1d95 0%, #3b82f6 100%);
             border-radius: 24px;
             padding: 60px;
             text-align: center;
         }
 
         .contact-card h2 {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Orbitron', sans-serif;
             font-size: 2.5rem;
             font-weight: 800;
             color: white;
@@ -334,8 +357,14 @@
     <div class="container">
         <!-- Header -->
         <header>
-            <div class="logo">Hari Tech Solutions</div>
-            <div class="tagline">Transforming Ideas into Digital Reality</div>
+            <div class="logo-container">
+                <img src="assets/public/images/haritech.webp" alt="Hari Tech Logo" class="logo-img">
+            </div>
+            
+            <div class="header-text-center">
+                <div class="logo">Hari Tech Solutions</div>
+                <div class="tagline">Transforming Ideas into Digital Reality</div>
+            </div>
         </header>
 
         <!-- Hero Section -->

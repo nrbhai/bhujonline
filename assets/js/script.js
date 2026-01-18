@@ -32,7 +32,7 @@ function initHomePage() {
         const html = categories.map(cat => `
             <li>
                 <a href="category.html?id=${cat.id}">
-                    <span class="iconify cat-icon" data-icon="${cat.icon}" data-inline="false"></span>
+                    <span class="cat-icon">${cat.icon}</span>
                     <span class="cat-text">
                         <span class="cat-name-en">${cat.name}</span>
                         <span class="cat-name-gu">${cat.gu_name}</span>
@@ -202,6 +202,33 @@ function renderProviders(providers, container) {
         return;
     }
 
+    // Sort providers: Verified + Top Rated > Verified > Others
+    providers.sort((a, b) => {
+        const aVerified = !!a.verified;
+        const aTopRated = !!a.top_rated;
+        const bVerified = !!b.verified;
+        const bTopRated = !!b.top_rated;
+
+        // Priority 1: Verified + Top Rated
+        const aTier1 = aVerified && aTopRated;
+        const bTier1 = bVerified && bTopRated;
+        if (aTier1 && !bTier1) return -1;
+        if (!aTier1 && bTier1) return 1;
+
+        // Priority 2: Verified (implied not Top Rated if we passed Tier 1 check, 
+        // OR checking strictly if we want all Verified (including Top Rated) to beat Unverified,
+        // but the previous check handles the "Verified+TopRated vs Verified" case?
+        // Wait, if A is Verified+TopRated and B is Verified, 
+        // A is Tier1, B is not Tier1. A comes first. (-1). Correct.
+        
+        // Priority 2: Verified
+        if (aVerified && !bVerified) return -1;
+        if (!aVerified && bVerified) return 1;
+
+        // Default: Maintain original order (or name sort if needed, but not requested)
+        return 0;
+    });
+
     const html = providers.map(p => {
         const tagsHtml = p.tags.map(t => {
             const className = t.toLowerCase().replace(/[^a-z0-9]/g, '');
@@ -213,8 +240,15 @@ function renderProviders(providers, container) {
         // Assume India code +91 if length is 10, otherwise just use number
         const waNumber = cleanPhone.length === 10 ? `91${cleanPhone}` : cleanPhone;
 
+        const verifiedHtml = p.verified ? `<span class="provider-badge badge-top-left verified">Verified</span>` : '';
+        const topRatedHtml = p.top_rated ? `<span class="provider-badge badge-top-right top-rated">Top Rated</span>` : '';
+        const badgeHtml = p.badge ? `<span class="provider-badge badge-top-right">${p.badge}</span>` : topRatedHtml;
+
         return `
         <li class="provider-card">
+            ${badgeHtml}
+            ${verifiedHtml}
+            <div style="height: 15px;"></div>
             <div class="provider-header">
                 <div class="provider-name">${p.name}</div>
                 <div class="provider-area">${p.area}</div>

@@ -18,21 +18,37 @@ for encoding in encodings:
         with open(csv_file, 'r', encoding=encoding) as f:
             reader = csv.DictReader(f)
             data_rows = list(reader)
-        print(f"✅ Successfully read CSV with {encoding} encoding")
+        print(f"[OK] Successfully read CSV with {encoding} encoding")
         break
     except (UnicodeDecodeError, KeyError):
         continue
 else:
-    print("❌ Could not read CSV with any encoding")
+    print("[ERROR] Could not read CSV with any encoding")
     exit(1)
 
 for row in data_rows:
         category = row['Category'].strip()
+        
+        # Rename categories (English) - Add your renames here
+        rename_map = {
+            'Masons': 'Mason',
+            'Ac fridge repairer': 'AC & Fridge Repair',
+            'Allopathy Doctors MBBS': 'Doctors MBBS',
+            'Allopathy Doctors MD ( Specialist )': 'Doctors MD ( Specialist )',
+            'Allopathy Doctors MD Physician': 'Doctors MD Physician',
+            # 'Old Name': 'New Name',
+        }
+        category = rename_map.get(category, category)
+        
         name = row['Name'].strip()
         phone = row['Phone'].strip()
         area = row['Area'].strip()
+        area = row['Area'].strip()
         tags = row['Tags'].strip() if row['Tags'] else ''
         webpage = row.get('Webpage', '').strip() if row.get('Webpage') else ''
+        badge = row.get('Badge', '').strip() if row.get('Badge') else ''
+        verified = row.get('Verified', '').strip() if row.get('Verified') else ''
+        top_rated = row.get('Top Rated', '').strip() if row.get('Top Rated') else ''
         
         # Create unique key for deduplication (category + name + phone)
         unique_key = f"{category}|{name}|{phone}"
@@ -53,7 +69,10 @@ for row in data_rows:
             'phone': phone,
             'area': area,
             'tags': tags_list,
-            'webpage': webpage
+            'webpage': webpage,
+            'badge': badge,
+            'verified': verified,
+            'top_rated': top_rated
         }
         
         categories_data[category]['providers'].append(provider)
@@ -67,226 +86,227 @@ for category_name in sorted(categories_data.keys()):
     # Create category ID (lowercase, spaces to dashes)
     category_id = category_name.lower().replace(' ', '-')
     
-    # Complete icon mapping for all categories - Iconify (Multi-colored)
+    # Complete icon mapping for all categories - Native Emojis (3D Style)
     icon_map = {
         # Home Services
-        'electrician': 'noto-v1:high-voltage',
-        'plumber': 'noto-v1:wrench',
-        'carpenter': 'noto-v1:hammer',
-        'painter': 'noto-v1:artist-palette',
-        'ac/fridge repair': 'noto-v1:snowflake',
-        'ac fridge repairer': 'noto-v1:snowflake',
-        'ac service': 'noto-v1:snowflake',
-        'pest control': 'noto-v1:bug',
-        'interior designer': 'noto-v1:couch-and-lamp',
-        'mason': 'noto-v1:brick',
-        'masons': 'noto-v1:brick',
-        'welder': 'noto-v1:fire',
-        'cleaning service': 'noto-v1:broom',
-        'laundry / dhobi': 'noto-v1:t-shirt',
-        'tank cleaning': 'noto-v1:droplet',
-        'pop/false ceiling': 'noto-v1:house',
-        'tiles fitter': 'noto-v1:building-construction',
-        'modular kitchen': 'noto-v1:fork-and-knife',
+        'electrician': '⚡',
+        'plumber': '🔧',
+        'carpenter': '🔨',
+        'painter': '🎨',
+        'ac/fridge repair': '❄️',
+        'ac fridge repairer': '❄️',
+        'ac & fridge repair': '❄️',
+        'ac service': '❄️',
+        'pest control': '🪲',
+        'interior designer': '🛋️',
+        'mason': '🧱',
+        'masons': '🧱',
+        'welder': '🔥',
+        'cleaning service': '🧹',
+        'laundry / dhobi': '🧺',
+        'tank cleaning': '💧',
+        'pop/false ceiling': '🏠',
+        'tiles fitter': '🏗️',
+        'modular kitchen': '🍽️',
         
         # Health & Medical
-        'medical': 'noto-v1:hospital',
-        'doctor': 'noto-v1:health-worker',
-        'allopathy doctors mbbs': 'noto-v1:stethoscope',
-        'allopathy doctors md ( specialist )': 'noto-v1:medical-symbol',
-        'allopathy doctors md physician': 'noto-v1:syringe',
-        'ayurvedic doctors': 'noto-v1:herb',
-        'homeopathy doctors': 'noto-v1:pill',
-        'hospital': 'noto-v1:hospital',
-        'hospitals': 'noto-v1:hospital',
-        'clinic': 'noto-v1:hospital',
-        'pharmacy': 'noto-v1:pill',
-        'medical store': 'noto-v1:pill',
-        'opticians': 'noto-v1:glasses',
-        'dental': 'noto-v1:tooth',
-        'physiotherapy': 'noto-v1:person-lifting-weights',
-        'physiotherapists': 'noto-v1:person-lifting-weights',
-        'blood bank': 'noto-v1:drop-of-blood',
-        'ambulance': 'noto-v1:ambulance',
-        'laboratories': 'noto-v1:test-tube',
-        'nurses': 'noto-v1:health-worker',
-        'nutritionists/dieticians': 'noto-v1:green-apple',
-        'dietician': 'noto-v1:green-apple',
+        'medical': '🏥',
+        'doctor': '👨‍⚕️',
+        'doctors mbbs': '🩺',
+        'doctors md ( specialist )': '⚕️',
+        'doctors md physician': '💉',
+        'ayurvedic doctors': '🌿',
+        'homeopathy doctors': '💊',
+        'hospital': '🏥',
+        'hospitals': '🏥',
+        'clinic': '🏥',
+        'pharmacy': '💊', 
+        'medical store': '💊',
+        'opticians': '👓',
+        'dental': '🦷',
+        'physiotherapy': '🏋️',
+        'physiotherapists': '🏋️',
+        'blood bank': '🩸',
+        'ambulance': '🚑',
+        'laboratories': '🧪',
+        'nurses': '👩‍⚕️',
+        'nutritionists/dieticians': '🥗',
+        'dietician': '🥗',
         
         # Transportation
-        'taxi': 'noto-v1:taxi',
-        'auto': 'noto-v1:auto-rickshaw',
-        'auto/taxi': 'noto-v1:taxi',
-        'bike/scooter repair': 'noto-v1:motorcycle',
-        'car mechanic': 'noto-v1:automobile',
-        'tours & travels': 'noto-v1:airplane',
-        'transport/tempo services': 'noto-v1:delivery-truck',
-        'packers & movers': 'noto-v1:package',
-        'courier services': 'noto-v1:package',
-        'tyre/puncture shop': 'noto-v1:automobile',
+        'taxi': '🚖',
+        'auto': '🛺',
+        'auto/taxi': '🚖',
+        'bike/scooter repair': '🛵',
+        'car mechanic': '🚘',
+        'tours & travels': '✈️',
+        'transport/tempo services': '🚚',
+        'packers & movers': '📦',
+        'courier services': '📦',
+        'tyre/puncture shop': '🚙',
         
         # Legal & Financial
-        'lawyer': 'noto-v1:balance-scale',
-        'legal services/ lawyer': 'noto-v1:balance-scale',
-        'notary': 'noto-v1:memo',
-        'notary/legal services': 'noto-v1:memo',
-        'ca': 'flat-color-icons:calculator',
-        'ca ( chartered accountants )': 'flat-color-icons:calculator',
-        'ca/tax consultants': 'flat-color-icons:calculator',
-        'chartered accountant': 'flat-color-icons:calculator',
-        'financial advisor': 'noto-v1:money-with-wings',
-        'insurance': 'noto-v1:shield',
-        'insurance agent': 'noto-v1:shield',
-        'insurance agents': 'noto-v1:shield',
-        'insurance companies': 'noto-v1:office-building',
-        'gst/accounting services': 'flat-color-icons:document',
-        'accounting services': 'flat-color-icons:document',
-        'share brokers': 'noto-v1:chart-increasing',
-        'stock market servicee': 'noto-v1:chart-increasing',
-        'mutual fund advisors': 'noto-v1:money-bag',
+        'lawyer': '⚖️',
+        'legal services/ lawyer': '⚖️',
+        'notary': '📝',
+        'notary/legal services': '📝',
+        'ca': '🧮',
+        'ca ( chartered accountants )': '🧮',
+        'ca/tax consultants': '🧮',
+        'chartered accountant': '🧮',
+        'financial advisor': '📉',
+        'insurance': '🛡️',
+        'insurance agent': '🛡️',
+        'insurance agents': '🛡️',
+        'insurance companies': '🏢',
+        'gst/accounting services': '📋',
+        'accounting services': '📋',
+        'share brokers': '💹',
+        'stock market servicee': '💹',
+        'mutual fund advisors': '💰',
         
         # Real Estate
-        'real estate': 'noto-v1:office-building',
-        'real estate agents': 'noto-v1:office-building',
-        'estate agent': 'noto-v1:office-building',
-        'house/shop rentals': 'noto-v1:house',
-        'pg/hostels': 'noto-v1:bed',
-        'homestay': 'noto-v1:house-with-garden',
-        'homestays': 'noto-v1:house-with-garden',
+        'real estate': '🏢',
+        'real estate agents': '🏢',
+        'estate agent': '🏘️',
+        'house/shop rentals': '🏠',
+        'pg/hostels': '🛏️',
+        'homestay': '🏡',
+        'homestays': '🏡',
         
         # Technology & IT
-        'computer': 'noto-v1:laptop',
-        'computer repair': 'noto-v1:laptop',
-        'computer laptop repairs': 'noto-v1:laptop',
-        'computer laptop sales': 'noto-v1:laptop',
-        'mobile': 'noto-v1:mobile-phone',
-        'laptop repair': 'noto-v1:laptop',
-        'cctv': 'noto-v1:video-camera',
-        'cctv installation': 'noto-v1:video-camera',
-        'software': 'flat-color-icons:data-configuration',
-        'website designer': 'flat-color-icons:web-design',
-        'website designers': 'flat-color-icons:web-design',
-        'web development': 'flat-color-icons:web-design',
-        'digital marketing': 'noto-v1:megaphone',
-        'graphic designers': 'noto-v1:artist-palette',
+        'computer': '💻',
+        'computer repair': '💻',
+        'computer laptop repairs': '💻',
+        'computer laptop sales': '💻',
+        'mobile': '📱',
+        'laptop repair': '💻',
+        'cctv': '📹',
+        'cctv installation': '📹',
+        'software': '💾',
+        'website designer': '🌐',
+        'website designers': '🌐',
+        'web development': '👨‍💻',
+        'digital marketing': '📢',
+        'graphic designers': '🎨',
         
         # Beauty & Wellness
-        'salon': 'noto-v1:scissors',
-        'spa': 'noto-v1:person-getting-massage',
-        'gym': 'noto-v1:person-lifting-weights',
-        'fitness': 'noto-v1:person-lifting-weights',
-        'yoga': 'noto-v1:person-in-lotus-position',
-        'yoga fitness trainers': 'noto-v1:person-in-lotus-position',
-        'yoga/fitness trainers': 'noto-v1:person-in-lotus-position',
-        'beauty parlour': 'noto-v1:lipstick',
-        'hair stylist ( m / f )': 'noto-v1:scissors',
+        'salon': '💇',
+        'spa': '💆',
+        'gym': '💪',
+        'fitness': '💪',
+        'yoga': '🧘',
+        'yoga fitness trainers': '🧘',
+        'yoga/fitness trainers': '🧘',
+        'beauty parlour': '💄',
+        'hair stylist ( m / f )': '✂️',
         
         # Food & Hospitality
-        'restaurant': 'noto-v1:fork-and-knife-with-plate',
-        'restaurants': 'noto-v1:fork-and-knife-with-plate',
-        'hotel': 'noto-v1:hotel',
-        'hotels': 'noto-v1:hotel',
-        'cafe': 'noto-v1:hot-beverage',
-        'bakery': 'noto-v1:birthday-cake',
-        'caterer': 'noto-v1:pot-of-food',
-        'caterars': 'noto-v1:pot-of-food',
-        'caterers': 'noto-v1:pot-of-food',
-        'sweet shop / mithai': 'noto-v1:candy',
-        'sweet shops/mithai': 'noto-v1:candy',
-        'cold storage': 'noto-v1:snowflake',
-        'ice delivery': 'noto-v1:ice-cream',
-        'milk delivery': 'noto-v1:glass-of-milk',
+        'restaurant': '🍽️',
+        'restaurants': '🍽️',
+        'hotel': '🏨',
+        'hotels': '🏨',
+        'cafe': '☕',
+        'bakery': '🎂',
+        'caterer': '🥘',
+        'caterars': '🥘',
+        'caterers': '🥘',
+        'sweet shop / mithai': '🍬',
+        'sweet shops/mithai': '🍬',
+        'cold storage': '❄️',
+        'ice delivery': '🍦',
+        'milk delivery': '🥛',
         
         # Education & Training
-        'education': 'noto-v1:graduation-cap',
-        'tuition': 'noto-v1:books',
-        'tuition classes': 'noto-v1:books',
-        'school': 'noto-v1:school',
-        'schools': 'noto-v1:school',
-        'coaching': 'noto-v1:books',
-        'coaching classes': 'noto-v1:books',
-        'training': 'noto-v1:books',
-        'teachers': 'noto-v1:teacher',
-        'dance class': 'noto-v1:musical-notes',
-        'music class': 'noto-v1:musical-notes',
+        'education': '🎓',
+        'tuition': '📚',
+        'tuition classes': '📚',
+        'school': '🏫',
+        'schools': '🏫',
+        'coaching': '📖',
+        'coaching classes': '📖',
+        'training': '📝',
+        'teachers': '👨‍🏫',
+        'dance class': '💃',
+        'music class': '🎵',
         
         # Retail & Shopping
-        'jeweller': 'noto-v1:gem-stone',
-        'jewellers': 'noto-v1:gem-stone',
-        'clothing': 'noto-v1:t-shirt',
-        'cloths merchant': 'noto-v1:t-shirt',
-        'fashion designer': 'noto-v1:scissors',
-        'electronics': 'noto-v1:television',
-        'mobile shop': 'noto-v1:mobile-phone',
-        'stationery': 'noto-v1:pencil',
-        "stationer's": 'noto-v1:pencil',
-        'bookstore': 'noto-v1:books',
-        'grocery': 'noto-v1:shopping-cart',
-        'kirana stores': 'noto-v1:shopping-cart',
-        'supermarket': 'noto-v1:shopping-cart',
-        'general store': 'noto-v1:shopping-cart',
-        'electrical stores': 'noto-v1:light-bulb',
-        'hardware stores': 'noto-v1:hammer-and-wrench',
+        'jeweller': '💎',
+        'jewellers': '💎',
+        'clothing': '👕',
+        'cloths merchant': '👕',
+        'fashion designer': '👗',
+        'electronics': '📺',
+        'mobile shop': '📱',
+        'stationery': '✏️',
+        "stationer's": '✏️',
+        'bookstore': '📚',
+        'grocery': '🛒',
+        'kirana stores': '🛒',
+        'supermarket': '🛒',
+        'general store': '🏪',
+        'electrical stores': '💡',
+        'hardware stores': '🛠️',
         
         # Professional Services
-        'photographer/videographer': 'noto-v1:camera',
-        'photographers / videographers': 'noto-v1:camera',
-        'printing & flex banner': 'noto-v1:printer',
-        'xerox': 'noto-v1:printer',
-        'event planner': 'noto-v1:calendar',
-        'event planners': 'noto-v1:calendar',
-        'decoration services': 'noto-v1:wrapped-gift',
-        'decorators': 'noto-v1:wrapped-gift',
-        'tent & sound system': 'noto-v1:speaker-high-volume',
-        'flower shops': 'noto-v1:bouquet',
-        'tailor': 'noto-v1:scissors',
+        'photographer/videographer': '📷',
+        'photographers / videographers': '📷',
+        'printing & flex banner': '🖨️',
+        'xerox': '🖨️',
+        'event planner': '📅',
+        'event planners': '📅',
+        'decoration services': '🎁',
+        'decorators': '🎁',
+        'tent & sound system': '🔊',
+        'flower shops': '💐',
+        'tailor': '🧵',
         
         # Construction & Materials
-        'hardware': 'noto-v1:hammer-and-wrench',
-        'construction material': 'noto-v1:brick',
-        'building material': 'noto-v1:brick',
-        'steel': 'noto-v1:factory',
-        'cement': 'noto-v1:brick',
-        'tiles': 'noto-v1:building-construction',
-        'civil contractor': 'noto-v1:construction-worker',
-        'aluminium fabrication': 'noto-v1:factory',
+        'hardware': '🔨',
+        'construction material': '🧱',
+        'building material': '🧱',
+        'steel': '🏗️',
+        'cement': '🧱',
+        'tiles': '⬛',
+        'civil contractor': '👷',
+        'aluminium fabrication': '⚙️',
         
         # Agriculture & Animals
-        'veterinary': 'noto-v1:paw-prints',
-        'veterinary doctor': 'noto-v1:health-worker',
-        'vetenary services / pet services': 'noto-v1:paw-prints',
-        'pet products': 'noto-v1:paw-prints',
-        'veterinary/animal care': 'noto-v1:health-worker',
-        'pet shop': 'noto-v1:dog',
-        'agriculture': 'noto-v1:sheaf-of-rice',
-        'agricultural implements': 'noto-v1:tractor',
-        'agricultural equipments': 'noto-v1:tractor',
-        'seeds': 'noto-v1:seedling',
+        'veterinary': '🐾',
+        'veterinary doctor': '👨‍⚕️',
+        'vetenary services / pet services': '🐾',
+        'pet products': '🦴',
+        'veterinary/animal care': '🐕',
+        'pet shop': '🐕',
+        'agriculture': '🌾',
+        'agricultural implements': '🚜',
+        'agricultural equipments': '🚜',
+        'seeds': '🌱',
         
         # Specialized Services
-        'astrologer': 'noto-v1:star',
-        'astrologer / vaastu': 'noto-v1:star',
-        'astrology/vaastu': 'noto-v1:star',
-        'solar panel': 'noto-v1:sun',
-        'solar panel installation': 'noto-v1:sun',
-        'water purifier': 'noto-v1:droplet',
-        'water purifier service': 'noto-v1:droplet',
-        'ro water purifier': 'noto-v1:droplet',
-        'water tanker services': 'noto-v1:delivery-truck',
-        'gujarati typist': 'noto-v1:keyboard',
-        'dastavej / document writers': 'noto-v1:memo',
-        'importers / exporters': 'noto-v1:globe-showing-asia-australia',
-        'chartered engineer': 'noto-v1:construction-worker',
-        'architect': 'noto-v1:triangular-ruler',
-        'inverter/battery dealers': 'noto-v1:battery',
-        'banks': 'noto-v1:bank',
-        'fire services': 'noto-v1:fire-engine',
-        'disaster repair': 'noto-v1:fire-engine',
-        'babysitters': 'noto-v1:baby',
-        'caretakers/elder care': 'noto-v1:health-worker',
+        'astrologer': '🔮',
+        'astrologer / vaastu': '🔮',
+        'astrology/vaastu': '🔮',
+        'solar panel': '☀️',
+        'solar panel installation': '☀️',
+        'water purifier': '💧',
+        'water purifier service': '💧',
+        'ro water purifier': '💧',
+        'water tanker services': '🚛',
+        'gujarati typist': '⌨️',
+        'dastavej / document writers': '✍️',
+        'importers / exporters': '🌏',
+        'chartered engineer': '👷',
+        'architect': '📐',
+        'inverter/battery dealers': '🔋',
+        'banks': '🏦',
+        'fire services': '🚒',
+        'disaster repair': '🆘',
+        'babysitters': '👶',
+        'caretakers/elder care': '👴',
     }
     
-    icon = icon_map.get(category_name.lower(), 'noto-v1:clipboard')
+    icon = icon_map.get(category_name.lower(), '📋')
     
     # Gujarati name mapping
     gujarati_map = {
@@ -294,25 +314,34 @@ for category_name in sorted(categories_data.keys()):
         'electrician': 'ઇલેક્ટ્રીશિયન',
         'plumber': 'પ્લમ્બર',
         'carpenter': 'સુથાર',
-        'painter': 'પેઇન્ટર',
+        'painter': 'રંગ કામ કરનાર',
         'ac/fridge repair': 'એસી/ફ્રિજ રિપેર',
         'ac fridge repairer': 'એસી/ફ્રિજ રિપેરર',
+        'ac & fridge repair': 'એસી/ફ્રિજ રિપેર',
+        'ac service': 'એસી સર્વિસ',
         'pest control': 'પેસ્ટ કંટ્રોલ',
         'interior designer': 'ઇન્ટીરિયર ડિઝાઇનર',
-        'mason': 'રાજ',
-        'masons': 'રાજ',
+        'mason': 'કડીઓ',
+        'masons': 'કડીઓ',
         'cleaning service': 'સફાઈ સેવા',
         'laundry / dhobi': 'ધોબી',
         'tank cleaning': 'ટાંકી સફાઈ',
-        'pop/false ceiling': 'ફોલ્સ સીલિંગ',
+        'pop/false ceiling': 'pop સીલિંગ',
         'tiles fitter': 'ટાઇલ્સ ફિટર',
         'modular kitchen': 'મોડ્યુલર કિચન',
         
         # Health & Medical
         'medical': 'મેડિકલ',
+        'doctor': 'ડોક્ટર',
+        'dental': 'ડેન્ટિસ્ટ',
+        'clinic': 'ક્લિનિક',
+        'pharmacy': 'ફાર્મસી',
+        'doctors mbbs': 'MBBS ડોક્ટર',
+        'doctors md ( specialist )': 'MD સ્પેશિયાલિસ્ટ ડોક્ટર',
+        'doctors md physician': 'MD ફિઝિશિયન',
         'hospitals': 'હોસ્પિટલ',
         'medical store': 'દવાની દુકાન',
-        'opticians': 'ચશ્મા',
+        'opticians': 'ચશ્મા બનાવનાર',
         'blood bank': 'બ્લડ બેંક',
         'ambulance': 'એમ્બ્યુલન્સ',
         'laboratories': 'લેબોરેટરી',
@@ -320,6 +349,8 @@ for category_name in sorted(categories_data.keys()):
         'nutritionists/dieticians': 'પોષણ નિષ્ણાત',
         'dietician': 'આહાર નિષ્ણાત',
         'physiotherapists': 'ફિઝિયોથેરાપિસ્ટ',
+        'ayurvedic doctors': 'આયુર્વેદિક ડોક્ટર',
+        'homeopathy doctors': 'હોમિયોપેથી ડોક્ટર',
         
         # Transportation
         'auto/taxi': 'ઓટો/ટેક્સી',
@@ -335,6 +366,10 @@ for category_name in sorted(categories_data.keys()):
         'legal services/ lawyer': 'વકીલ',
         'notary': 'નોટરી',
         'notary/legal services': 'નોટરી સેવા',
+        'notary/legal services': 'નોટરી સેવા',
+        'ca': 'CA',
+        'chartered accountant': 'ચાર્ટર્ડ એકાઉન્ટન્ટ',
+        'ca ( chartered accountants )': 'CA (ચાર્ટર્ડ એકાઉન્ટન્ટ)',
         'ca/tax consultants': 'સીએ/ટેક્સ સલાહકાર',
         'financial advisor': 'નાણાકીય સલાહકાર',
         'insurance agent': 'વીમા એજન્ટ',
@@ -344,16 +379,22 @@ for category_name in sorted(categories_data.keys()):
         'share brokers': 'શેર બ્રોકર',
         'stock market servicee': 'સ્ટોક માર્કેટ સેવા',
         'mutual fund advisors': 'મ્યુચ્યુઅલ ફંડ સલાહકાર',
+        'insurance companies': 'વીમા કંપનીઓ',
         
         # Real Estate
-        'real estate agents': 'રીઅલ એસ્ટેટ એજન્ટ',
+        'real estate agents': 'રીઅલ એસ્ટેટ દલાલ',
         'estate agent': 'એસ્ટેટ એજન્ટ',
-        'house/shop rentals': 'ઘર/દુકાન ભાડે',
+        'house/shop rentals': 'ઘર/દુકાન ભાડે આપનાર',
         'pg/hostels': 'પીજી/હોસ્ટેલ',
         'homestay': 'હોમસ્ટે',
         'homestays': 'હોમસ્ટે',
         
         # Technology
+        'computer': 'કમ્પ્યુટર',
+        'mobile': 'મોબાઈલ',
+        'laptop repair': 'લેપટોપ રિપેર',
+        'cctv': 'સીસીટીવી',
+        'software': 'સોફ્ટવેર',
         'computer repair': 'કમ્પ્યુટર રિપેર',
         'computer laptop sales': 'કમ્પ્યુટર લેપટોપ વેચાણ',
         'cctv installation': 'સીસીટીવી ઇન્સ્ટોલેશન',
@@ -362,8 +403,13 @@ for category_name in sorted(categories_data.keys()):
         'graphic designers': 'ગ્રાફિક ડિઝાઇનર',
         
         # Beauty & Wellness
+        'gym': 'જિમ',
+        'salon': 'સલૂન',
+        'spa': 'સ્પા',
+        'beauty parlour': 'બ્યુટી પાર્લર',
         'yoga/fitness trainers': 'યોગ/ફિટનેસ ટ્રેનર',
         'yoga fitness trainers': 'યોગ/ફિટનેસ ટ્રેનર',
+        'hair stylist ( m / f )': 'હેર સ્ટાઈલિસ્ટ (સ્ત્રી/પુરુષ)',
         
         # Food & Hospitality
         'restaurants': 'રેસ્ટોરન્ટ',
@@ -383,12 +429,18 @@ for category_name in sorted(categories_data.keys()):
         'teachers': 'શિક્ષક',
         
         # Retail
+        'jeweller': 'જ્વેલર્સ',
+        'bookstore': 'પુસ્તક ભંડાર',
+        'grocery': 'કરિયાણું',
+        'supermarket': 'સુપરમાર્કેટ',
+        'mobile shop': 'મોબાઈલ શોપ',
         'jewellers': 'સોની',
         'cloths merchant': 'કપડાની દુકાન',
         'fashion designer': 'ફેશન ડિઝાઇનર',
         'kirana stores': 'કિરાણાની દુકાન',
         'electrical stores': 'ઇલેક્ટ્રિકલ સ્ટોર',
         'hardware stores': 'હાર્ડવેર સ્ટોર',
+        'hardware': 'હાર્ડવેર',
         "stationer's": 'સ્ટેશનરી',
         'stationery': 'સ્ટેશનરી',
         
@@ -407,11 +459,20 @@ for category_name in sorted(categories_data.keys()):
         'construction material': 'બાંધકામ સામગ્રી',
         'civil contractor': 'સિવિલ કોન્ટ્રાક્ટર',
         'aluminium fabrication': 'એલ્યુમિનિયમ ફેબ્રિકેશન',
+        'steel': 'સ્ટીલ',
+        'cement': 'સિમેન્ટ',
+        'tiles': 'ટાઇલ્સ',
         
         # Animals & Agriculture
         'vetenary services / pet services': 'વેટરનરી સેવા',
         'veterinary/animal care': 'પશુ ચિકિત્સા',
+        'veterinary doctor': 'વેટરનરી ડોક્ટર',
+        'pet shop': 'પેટ શોપ',
+        'pet products': 'પેટ પ્રોડક્ટ્સ',
+        'agriculture': 'ખેતીવાડી',
+        'seeds': 'બિયારણ',
         'agricultural implements': 'ખેતી સાધનો',
+        'agricultural equipments': 'ખેતી સાધનો',
         
         # Specialized Services
         'astrologer / vaastu': 'જ્યોતિષી/વાસ્તુ',
@@ -431,7 +492,11 @@ for category_name in sorted(categories_data.keys()):
         'caretakers/elder care': 'કેરટેકર',
     }
     
-    gujarati_name = gujarati_map.get(category_name.lower(), category_name)
+    gujarati_name = gujarati_map.get(category_name.lower())
+    if not gujarati_name:
+        with open('missing.txt', 'a', encoding='utf-8') as log:
+            log.write(category_name + '\n')
+        gujarati_name = category_name
     
     category_obj = {
         'id': category_id,
@@ -471,7 +536,14 @@ if (typeof window !== 'undefined') {
 }
 ''')
 
-print(f"✅ Converted {len(categories)} categories")
+# Write to JSON file (for external use/updates)
+json_file = 'data.json'
+with open(json_file, 'w', encoding='utf-8') as f:
+    json.dump(categories, f, indent=2, ensure_ascii=False)
+
+print(f"[OK] Written to {json_file}")
+
+print(f"[OK] Converted {len(categories)} categories")
 total_providers = sum(len(cat['providers']) for cat in categories)
-print(f"✅ Total providers: {total_providers}")
-print(f"✅ Written to {js_file}")
+print(f"[OK] Total providers: {total_providers}")
+print(f"[OK] Written to {js_file}")

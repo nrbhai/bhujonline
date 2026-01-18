@@ -67,19 +67,22 @@ nav a:hover {
     }
     
     header {
-        margin-bottom: 8px !important;
+        margin-bottom: 4px !important;
         transition: all 0.3s ease;
     }
 
     header img {
-        height: 180px !important; /* Larger logo on mobile as requested */
+        height: 240px !important; /* Larger logo on mobile as requested */
         margin-bottom: 2px !important;
+        margin-top: -40px !important; /* Shift up to remove whitespace */
         transition: all 0.3s ease;
     }
 
     header div {
-        font-size: 0.9rem !important; /* Smaller text */
+        font-size: 1.2rem !important; /* Larger text on mobile */
         margin-bottom: 6px !important;
+        margin-top: -30px !important; /* Shift text up closer to logo */
+        font-weight: 700 !important; /* Bold on mobile too */
         transition: all 0.3s ease;
     }
 
@@ -90,7 +93,7 @@ nav a:hover {
     
     nav {
         padding: 4px 0 !important; 
-        margin-bottom: 5px !important;
+        margin-bottom: 2px !important;
         transition: all 0.3s ease;
     }
     
@@ -101,7 +104,8 @@ nav a:hover {
     /* Target the subtitle paragraphs specifically on homepage */
     header div p {
         margin: 0 !important;
-        font-size: 0.85rem !important;
+        font-size: 1.1rem !important;
+        line-height: 1.3 !important;
     }
 
     /* Reduce spacing for category title on category.html */
@@ -175,6 +179,8 @@ header {
     text-align: center;
     gap: 0;
 }
+
+
 
 h1 {
     font-family: var(--font-main);
@@ -309,7 +315,7 @@ h1 a {
     list-style: none;
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr)); /* Force equal widths */
-    grid-auto-rows: 120px; /* Fixed height for uniformity */
+    grid-auto-rows: 180px; /* Increased height for larger emojis */
     gap: 16px;
 }
 
@@ -351,13 +357,19 @@ h1 a {
     background: #f9fafb;
 }
 
+/* Category Icons - 3D Emojis */
 .cat-icon {
-    font-size: 2.5rem; /* Larger size */
-    margin-bottom: 4px;
-    transition: transform 0.3s ease;
+    font-size: 3.5rem;
+    margin-bottom: 8px;
     display: inline-block;
-    width: 2.5rem;
-    height: 2.5rem;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+    /* Emojis render 3D natively on most systems */
+}
+
+.category-card:hover .cat-icon {
+    transform: scale(1.15) rotate(5deg);
+    filter: drop-shadow(0 6px 8px rgba(0,0,0,0.15));
 }
 
 .cat-text {
@@ -380,10 +392,10 @@ h1 a {
 }
 
 .cat-name-gu {
-    font-size: 0.8rem;
-    color: var(--text-muted);
-    font-weight: 500;
-    margin-top: 2px;
+    font-size: 0.85rem;
+    color: #000000;
+    font-weight: 700;
+    margin-top: 6px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -434,7 +446,7 @@ h1 a {
     gap: 10px;
     box-shadow: var(--shadow-sm);
     transition: all 0.2s ease;
-    min-height: 140px; /* Enforce minimum height */
+    min-height: 160px; /* Enforce minimum height (Increased) */
     height: 100%; /* Fill grid cell */
 }
 
@@ -463,6 +475,7 @@ h1 a {
     -webkit-line-clamp: 2; /* Limit to 2 lines */
     line-clamp: 2; /* Standard property for compatibility */
     -webkit-box-orient: vertical;
+    padding-right: 70px; /* Space for Top Rated badge */
 }
 
 .provider-area {
@@ -606,4 +619,65 @@ footer {
     color: var(--text-muted);
     border-top: 1px solid var(--border-color);
     padding-top: 12px;
+}
+
+/* Provider Badges & Verification */
+.verified-icon {
+    color: #1DA1F2; /* Verified Blue */
+    margin-left: 5px;
+    font-size: 1rem;
+    font-weight: 900;
+    display: inline-block;
+}
+
+.provider-badge {
+    position: absolute;
+    top: 0;
+    padding: 4px 10px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    z-index: 5;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+.badge-top-right {
+    right: 0;
+    background: linear-gradient(135deg, #FFD700, #F59E0B); /* Gold */
+    color: #4B3621;
+    border-bottom-left-radius: 8px;
+}
+
+.badge-top-left {
+    left: 0;
+    background: linear-gradient(135deg, #1DA1F2, #0077b5); /* Verified Blue */
+    color: #fff;
+    border-bottom-right-radius: 8px;
+}
+
+.provider-card {
+    position: relative;
+    overflow: hidden; 
+}
+
+.provider-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    margin-top: 26px; /* Space for badges */
+}
+
+li.provider-card .provider-header {
+    margin-top: 40px !important; /* Force space for badges */
+}
+
+@keyframes blink-animation {
+    0% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.8; transform: scale(1.05); box-shadow: 0 0 15px rgba(16, 185, 129, 0.6); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+.blink-effect {
+    animation: blink-animation 2s infinite ease-in-out;
 }

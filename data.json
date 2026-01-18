@@ -1,7 +1,4 @@
-// Auto-generated from data.csv
-// Do not edit manually - use data.csv and regenerate
-
-const categoriesData = [
+[
   {
     "id": "ac-&-fridge-repair",
     "name": "AC & Fridge Repair",
@@ -3670,22 +3667,4 @@ const categoriesData = [
       }
     ]
   }
-];
-
-
-// Helper function to get all categories
-function getAllCategories() {
-    return categoriesData;
-}
-
-// Helper function to get providers by category ID
-function getProviders(categoryId) {
-    const category = categoriesData.find(cat => cat.id === categoryId);
-    return category || null;
-}
-
-// Export for use in script.js
-if (typeof window !== 'undefined') {
-    window.getAllCategories = getAllCategories;
-    window.getProviders = getProviders;
-}
+]
